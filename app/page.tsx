@@ -24,7 +24,7 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden flex items-center">
+    <div className="relative min-h-screen w-full overflow-hidden flex items-center pt-28 pb-12">
       <motion.div
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, scale: 1.03 }}
@@ -143,7 +143,7 @@ function CollectionSection() {
     { title: "Classic Icons", desc: "The foundation of automotive history.", img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" },
     { title: "Supercars", desc: "Pushing the limits of engineering.", img: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=800&auto=format&fit=crop" },
     { title: "Rare Collections", desc: "One-of-one unicorns of the road.", img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" },
-    { title: "Motorsport Legends", desc: "Born on the track.", img: "https://images.unsplash.com/photo-1570359288117-640a233ea853?q=80&w=800&auto=format&fit=crop" },
+    { title: "Motorsport Legends", desc: "Born on the track.", img: "https://images.unsplash.com/photo-1566008885218-90abf9200ddb?q=80&w=800&auto=format&fit=crop" },
     { title: "Future Classics", desc: "Modern marvels destined for greatness.", img: "https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?q=80&w=800&auto=format&fit=crop" },
   ];
 

@@ -265,7 +265,7 @@ function ImageGallery() {
 
   const images = [
     { src: "https://images.unsplash.com/photo-1592853625511-84e12e1329a4?q=80&w=1600&auto=format&fit=crop", span: "col-span-2 row-span-2" },
-    { src: "https://images.unsplash.com/photo-1614977645540-7faa32029c78?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
+    { src: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
     { src: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
   ];
 
@@ -385,7 +385,7 @@ function RelatedStories() {
   const stories = [
     { title: "The Ferrari F40 Legacy", img: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=800&auto=format&fit=crop" },
     { title: "Why Analog Supercars Matter", img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" },
-    { title: "Inside Ferrari's Golden Era", img: "https://images.unsplash.com/photo-1570359288117-640a233ea853?q=80&w=800&auto=format&fit=crop" },
+    { title: "Inside Ferrari's Golden Era", img: "https://images.unsplash.com/photo-1566008885218-90abf9200ddb?q=80&w=800&auto=format&fit=crop" },
   ];
 
   return (

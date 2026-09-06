@@ -179,7 +179,7 @@ function FeaturedCollections({ onOpenCreate }: { onOpenCreate: () => void }) {
     { title: "Dream Garage", count: 5, images: [
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=400&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1620882195018-0937a09d3df3?q=80&w=400&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=400&auto=format&fit=crop"
     ]},
     { title: "German Legends", count: 12, images: [
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=600&auto=format&fit=crop",
@@ -251,7 +251,7 @@ function DreamGarageFeature() {
   const cars = [
     { name: "Ferrari LaFerrari", img: "https://images.unsplash.com/photo-1592853625511-84e12e1329a4?q=80&w=800&auto=format&fit=crop" },
     { name: "Porsche Carrera GT", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" },
-    { name: "McLaren F1", img: "https://images.unsplash.com/photo-1620882195018-0937a09d3df3?q=80&w=800&auto=format&fit=crop" }
+    { name: "McLaren F1", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" }
   ];
 
   return (

@@ -281,7 +281,7 @@ function PhotoExperience() {
 
   const images = [
     { src: "https://images.unsplash.com/photo-1592853625511-84e12e1329a4?q=80&w=1600&auto=format&fit=crop", span: "col-span-2 row-span-2" },
-    { src: "https://images.unsplash.com/photo-1614977645540-7faa32029c78?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
+    { src: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
     { src: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop", span: "col-span-1 row-span-1" },
   ];
 
@@ -392,7 +392,7 @@ function RelatedLegends() {
   const related = [
     { name: "Porsche 959", desc: "The technological marvel of the 80s.", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" },
     { name: "Lamborghini Countach", desc: "The definitive poster car.", img: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=800&auto=format&fit=crop" },
-    { name: "McLaren F1", desc: "The ultimate hypercar benchmark.", img: "https://images.unsplash.com/photo-1620882195018-0937a09d3df3?q=80&w=800&auto=format&fit=crop" },
+    { name: "McLaren F1", desc: "The ultimate hypercar benchmark.", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" },
   ];
 
   return (

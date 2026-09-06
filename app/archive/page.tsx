@@ -200,7 +200,7 @@ function FeaturedCollections() {
     { title: "The Ferrari Legends", count: 42, years: "1947 - Present", img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" },
     { title: "The Porsche Icons", count: 28, years: "1963 - Present", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" },
     { title: "The Golden Era Of Supercars", count: 15, years: "1980 - 1999", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" },
-    { title: "Racing Heritage", count: 34, years: "1950 - 1990", img: "https://images.unsplash.com/photo-1570359288117-640a233ea853?q=80&w=800&auto=format&fit=crop" },
+    { title: "Racing Heritage", count: 34, years: "1950 - 1990", img: "https://images.unsplash.com/photo-1566008885218-90abf9200ddb?q=80&w=800&auto=format&fit=crop" },
     { title: "Future Classics", count: 19, years: "2010 - Present", img: "https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?q=80&w=800&auto=format&fit=crop" },
   ];
 
@@ -256,9 +256,9 @@ function VehicleGrid() {
     { name: "Mercedes 300SL", year: "1954-1963", cat: "Classic", spec1: "3.0L Inline-6", spec2: "240 HP", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" },
     { name: "Lamborghini Miura", year: "1966-1973", cat: "Supercar", spec1: "4.0L V12", spec2: "345 HP", img: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=800&auto=format&fit=crop" },
     { name: "Aston Martin DB5", year: "1963-1965", cat: "Grand Tourer", spec1: "4.0L Inline-6", spec2: "282 HP", img: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=800&auto=format&fit=crop" },
-    { name: "Jaguar E-Type", year: "1961-1974", cat: "Sports Car", spec1: "3.8L Inline-6", spec2: "265 HP", img: "https://images.unsplash.com/photo-1592314546571-0428a1c626eb?q=80&w=800&auto=format&fit=crop" },
-    { name: "Ford GT40", year: "1964-1969", cat: "Race Car", spec1: "7.0L V8", spec2: "485 HP", img: "https://images.unsplash.com/photo-1612058097956-654db52cb8b6?q=80&w=800&auto=format&fit=crop" },
-    { name: "McLaren F1", year: "1992-1998", cat: "Hypercar", spec1: "6.1L V12", spec2: "618 HP", img: "https://images.unsplash.com/photo-1620882195018-0937a09d3df3?q=80&w=800&auto=format&fit=crop" },
+    { name: "Jaguar E-Type", year: "1961-1974", cat: "Sports Car", spec1: "3.8L Inline-6", spec2: "265 HP", img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" },
+    { name: "Ford GT40", year: "1964-1969", cat: "Race Car", spec1: "7.0L V8", spec2: "485 HP", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" },
+    { name: "McLaren F1", year: "1992-1998", cat: "Hypercar", spec1: "6.1L V12", spec2: "618 HP", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" },
   ];
 
   return (
