@@ -1,0 +1,8 @@
+{
+  "name": "Classic Cars",
+  "description": "The world's premium automotive archive and enthusiast platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
