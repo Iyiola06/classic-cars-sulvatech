@@ -45,7 +45,7 @@ function ArchiveHero() {
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-background/60 dark:bg-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-100" />
         {searchActive && (
           <motion.div 
             initial={{ opacity: 0 }}
@@ -62,13 +62,13 @@ function ArchiveHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="font-semibold tracking-widest uppercase mb-6 block text-sm text-foreground/60">
+          <span className="font-semibold tracking-widest uppercase mb-6 block text-sm text-white/60">
             The Automotive Encyclopedia
           </span>
-          <h1 className="font-semibold leading-[1.05] tracking-[-0.02em] mb-4 text-4xl md:text-6xl lg:text-[80px]">
+          <h1 className="text-white font-semibold leading-[1.05] tracking-[-0.02em] mb-4 text-4xl md:text-6xl lg:text-[80px]">
             Explore Every Legend.
           </h1>
-          <p className="max-w-2xl mx-auto leading-relaxed mb-12 text-xl text-foreground/70">
+          <p className="max-w-2xl mx-auto leading-relaxed mb-12 text-xl text-white/80">
             Discover the history, engineering, and stories behind the world's most iconic vehicles.
           </p>
         </motion.div>
@@ -102,10 +102,10 @@ function ArchiveHero() {
               </button>
             )}
             <div className="flex items-center gap-2 pl-4 border-l border-foreground/10 shrink-0">
-              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-foreground/60">
+              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-white/60">
                 <Mic className="w-5 h-5" />
               </button>
-              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-foreground/60">
+              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-white/60">
                 <SlidersHorizontal className="w-5 h-5" />
               </button>
             </div>
@@ -136,7 +136,7 @@ function ArchiveHero() {
                     <div className="flex flex-col gap-2">
                       {trendingSearches.map((item) => (
                         <button key={item} className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-foreground/5 transition-colors group text-left">
-                          <Search className="w-4 h-4 group-hover:text-foreground/70 transition-colors text-foreground/40 group-hover:text-foreground/70" />
+                          <Search className="w-4 h-4 group-hover:text-white/80 transition-colors text-foreground/40 group-hover:text-white/80" />
                           <span className="font-medium group-hover:text-foreground transition-colors text-foreground/80 group-hover:text-foreground">{item}</span>
                         </button>
                       ))}
@@ -170,7 +170,7 @@ function FilterSystem() {
           {filters.map((filter) => (
             <button 
               key={filter.label} 
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${filter.active ? 'bg-foreground text-background shadow-md' : 'text-foreground/60 hover:text-foreground'}`}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${filter.active ? 'bg-foreground text-background shadow-md' : 'text-white/60 hover:text-foreground'}`}
             >
               {filter.label}
             </button>
@@ -295,7 +295,7 @@ function VehicleGrid() {
             <div className="p-5 flex flex-col flex-1 bg-background/50 dark:bg-[#0f0f13]/50 backdrop-blur-md relative z-10 transition-colors duration-500">
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold leading-tight text-lg text-foreground">{car.name}</h3>
-                <span className="font-bold px-2 py-1 rounded-full bg-foreground/5 text-xs text-foreground/60">{car.year}</span>
+                <span className="font-bold px-2 py-1 rounded-full bg-foreground/5 text-xs text-white/60">{car.year}</span>
               </div>
               
               <span className="font-medium mb-auto text-sm text-foreground/50">{car.cat}</span>
@@ -335,7 +335,7 @@ function ArchiveIntelligence() {
           <h2 className="font-semibold tracking-tight mb-6 text-2xl md:text-4xl lg:text-5xl">
             The World's Automotive Knowledge, Organized.
           </h2>
-          <p className="leading-relaxed max-w-lg text-xl text-foreground/60">
+          <p className="leading-relaxed max-w-lg text-xl text-white/60">
             Every technical specification, production history, and editorial story seamlessly connected within our proprietary archive.
           </p>
         </div>
@@ -351,7 +351,7 @@ function ArchiveIntelligence() {
               className={`glass-panel p-8 rounded-[32px] ${i === 2 ? 'sm:col-span-2' : ''}`}
             >
               <h3 className="font-semibold mb-2 text-xl md:text-2xl lg:text-4xl">{stat.number}</h3>
-              <p className="font-medium text-foreground/60">{stat.label}</p>
+              <p className="font-medium text-white/60">{stat.label}</p>
             </motion.div>
           ))}
         </div>

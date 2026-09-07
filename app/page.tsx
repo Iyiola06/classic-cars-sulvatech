@@ -63,9 +63,9 @@ function HeroSection() {
           className="object-cover object-center w-full h-full opacity-30 md:opacity-100"
         />
         {/* Gradients optimized for legibility on mobile vs desktop */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/70 to-background/95 dark:from-[#050505]/95 dark:via-[#050505]/80 dark:to-[#050505]/95 md:hidden" />
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-background/95 via-background/40 to-transparent dark:from-[#050505]/95 dark:via-[#050505]/40" />
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/95 via-[#050505]/70 to-[#050505]/95 dark:from-[#050505]/95 dark:via-[#050505]/80 dark:to-[#050505]/95 md:hidden" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#050505]/95 via-[#050505]/40 to-transparent dark:from-[#050505]/95 dark:via-[#050505]/40" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-[#050505]/90 via-transparent to-transparent opacity-60" />
       </motion.div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-12 gap-6 items-center">
@@ -75,13 +75,13 @@ function HeroSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="col-span-12 md:col-span-8 lg:col-span-7 flex flex-col gap-6"
         >
-          <span className="font-semibold tracking-widest uppercase drop-shadow-md md:drop-shadow-none text-sm text-foreground/90 md:text-foreground/60">
+          <span className="font-semibold tracking-widest uppercase drop-shadow-md md:drop-shadow-none text-sm text-white/90">
             The Global Automotive Archive
           </span>
-          <h1 className="font-semibold leading-[1.1] md:leading-[1.05] tracking-[-0.02em] drop-shadow-xl md:drop-shadow-none text-4xl md:text-6xl lg:text-[80px]">
+          <h1 className="text-white font-semibold leading-[1.1] md:leading-[1.05] tracking-[-0.02em] drop-shadow-xl md:drop-shadow-none text-4xl md:text-6xl lg:text-[80px]">
             Where Automotive Legends Live.
           </h1>
-          <p className="max-w-[550px] leading-relaxed drop-shadow-md md:drop-shadow-none text-lg md:text-xl text-foreground/90 md:text-foreground/70">
+          <p className="max-w-[550px] leading-relaxed drop-shadow-md md:drop-shadow-none text-lg md:text-xl text-white/90">
             650K+ enthusiasts. One curated destination for automotive legends, rare vehicles, and stories that shaped the world of cars.
           </p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-4">

@@ -22,16 +22,16 @@ export default function CommunityPage() {
             unoptimized
           />
           {/* Dark Overlay for text legibility */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30 dark:from-[#050505]/95 dark:via-[#050505]/70 dark:to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent dark:from-[#050505]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/70 to-[#050505]/30 dark:from-[#050505]/95 dark:via-[#050505]/70 dark:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent dark:from-[#050505]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="max-w-3xl">
-            <h1 className="font-serif tracking-tighter mb-6 text-4xl md:text-6xl lg:text-8xl">
+            <h1 className="text-white font-serif tracking-tighter mb-6 text-4xl md:text-6xl lg:text-8xl">
               Community
             </h1>
-            <p className="leading-relaxed font-light mb-12 text-lg md:text-xl lg:text-2xl">
+            <p className="text-white/80 leading-relaxed font-light mb-12 text-lg md:text-xl lg:text-2xl">
               Join enthusiasts and collectors from around the globe. Share your passion, discuss restorations, and explore classic car culture together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

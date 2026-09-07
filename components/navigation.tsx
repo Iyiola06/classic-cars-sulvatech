@@ -39,9 +39,7 @@ export default function Navigation() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className={`fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl h-[72px] z-50 rounded-full flex items-center justify-between px-6 md:px-8 transition-all duration-300 ${
-          isScrolled ? 'glass-panel shadow-lg' : 'bg-transparent'
-        }`}
+        className={`fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl h-[72px] z-50 rounded-full flex items-center justify-between px-6 md:px-8 transition-all duration-300 glass-panel shadow-md backdrop-blur-2xl bg-background/40 dark:bg-[#111]/40 border border-foreground/10`}
       >
         <motion.div 
           initial={{ left: '-100%', opacity: 0 }}

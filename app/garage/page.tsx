@@ -64,7 +64,7 @@ function GarageHero() {
           referrerPolicy="no-referrer"
         />
         {/* Dark Garage Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-black/40 to-black/30 dark:from-[#050505] dark:via-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/40 to-black/30 dark:from-[#050505] dark:via-black/60" />
       </motion.div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto pb-24">
@@ -77,10 +77,10 @@ function GarageHero() {
           <span className="font-bold tracking-[0.25em] uppercase mb-6 block drop-shadow-md text-[10px] md:text-xs text-white/80">
             MY GARAGE
           </span>
-          <h1 className="font-semibold leading-[1.05] tracking-tight drop-shadow-xl mb-6 text-3xl md:text-5xl lg:text-7xl">
+          <h1 className="text-white font-semibold leading-[1.05] tracking-tight drop-shadow-xl mb-6 text-3xl md:text-5xl lg:text-7xl">
             Your Automotive Collection.
           </h1>
-          <p className="font-medium leading-relaxed mb-8 max-w-xl text-lg md:text-xl lg:text-2xl">
+          <p className="text-white/80 font-medium leading-relaxed mb-8 max-w-xl text-lg md:text-xl lg:text-2xl">
             Save legends, build collections, and create your personal archive of automotive icons.
           </p>
         </motion.div>

@@ -62,8 +62,8 @@ function HeroSection() {
           referrerPolicy="no-referrer"
         />
         {/* Cinematic Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent dark:from-[#050505] dark:via-[#050505]/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent dark:from-[#050505]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/20 to-transparent dark:from-[#050505] dark:via-[#050505]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/80 via-transparent to-transparent dark:from-[#050505]/80" />
       </motion.div>
 
       {/* Vehicle Title Area */}
@@ -85,10 +85,10 @@ function HeroSection() {
             transition={{ delay: 1.0, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-4"
           >
-            <h1 className="font-semibold leading-[0.9] tracking-[-0.03em] text-4xl md:text-6xl lg:text-[80px]">
+            <h1 className="text-white font-semibold leading-[0.9] tracking-[-0.03em] text-4xl md:text-6xl lg:text-[80px]">
               Ferrari F40
             </h1>
-            <span className="font-medium tracking-tight text-xl md:text-2xl lg:text-4xl">
+            <span className="text-white/80 font-medium tracking-tight text-xl md:text-2xl lg:text-4xl">
               1987 – 1992
             </span>
           </motion.div>
@@ -153,7 +153,7 @@ function QuickDataSection() {
             className="glass-panel shrink-0 w-[240px] p-6 rounded-3xl snap-start border border-foreground/5 dark:border-white/10 flex flex-col justify-between h-[140px] hover:-translate-y-1 transition-transform duration-500"
           >
             <span className="font-semibold tracking-wider uppercase text-sm text-foreground/50">{spec.label}</span>
-            <span className="font-medium tracking-tight text-lg md:text-xl lg:text-2xl">{spec.value}</span>
+            <span className="text-white/80 font-medium tracking-tight text-lg md:text-xl lg:text-2xl">{spec.value}</span>
           </motion.div>
         ))}
       </div>

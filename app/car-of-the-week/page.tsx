@@ -57,8 +57,8 @@ function EditorialHero() {
           className="object-cover w-full h-full"
         />
         {/* Dark Editorial Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-black/10 to-transparent dark:from-[#050505]/90 dark:via-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent dark:from-[#050505]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-black/10 to-transparent dark:from-[#050505]/90 dark:via-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/80 via-transparent to-transparent dark:from-[#050505]/80" />
       </motion.div>
 
       {/* Feature Label (Top Left) */}
@@ -82,10 +82,10 @@ function EditorialHero() {
           transition={{ delay: 1.0, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-4xl"
         >
-          <h1 className="font-semibold leading-[0.9] tracking-[-0.04em] drop-shadow-xl mb-6 text-4xl md:text-6xl lg:text-[80px]">
+          <h1 className="text-white font-semibold leading-[0.9] tracking-[-0.04em] drop-shadow-xl mb-6 text-4xl md:text-6xl lg:text-[80px]">
             AMG CLA 45
           </h1>
-          <p className="font-medium tracking-tight drop-shadow-md max-w-2xl text-xl md:text-2xl lg:text-4xl">
+          <p className="text-white/80 font-medium tracking-tight drop-shadow-md max-w-2xl text-xl md:text-2xl lg:text-4xl">
             "The world's most powerful production four-cylinder engine."
           </p>
         </motion.div>

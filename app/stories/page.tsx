@@ -55,7 +55,7 @@ function EditorialHero() {
           referrerPolicy="no-referrer"
         />
         {/* Dark Editorial Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-black/40 to-transparent dark:from-[#050505] dark:via-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/40 to-transparent dark:from-[#050505] dark:via-black/60" />
       </motion.div>
 
       {/* Featured Story Content */}
@@ -66,13 +66,13 @@ function EditorialHero() {
           transition={{ delay: 0.6, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl"
         >
-          <span className="font-bold tracking-[0.2em] uppercase dark:text-white/80 mb-6 block drop-shadow-md text-xs md:text-sm text-foreground/80 dark:text-white/80">
+          <span className="font-bold tracking-[0.2em] uppercase mb-6 block drop-shadow-md text-xs md:text-sm text-white/80">
             Featured Story
           </span>
-          <h1 className="font-semibold leading-[0.95] tracking-[-0.03em] dark:text-white drop-shadow-xl mb-6 text-4xl md:text-6xl lg:text-[80px]">
+          <h1 className="text-white font-semibold leading-[0.95] tracking-[-0.03em]  drop-shadow-xl mb-6 text-4xl md:text-6xl lg:text-[80px]">
             The Machines That Defined Generations
           </h1>
-          <p className="font-medium dark:text-white/80 leading-relaxed mb-8 max-w-2xl drop-shadow-md text-lg md:text-xl lg:text-2xl">
+          <p className="text-white/80 font-medium leading-relaxed mb-8 max-w-2xl drop-shadow-md text-lg md:text-xl lg:text-2xl">
             Explore the engineering, history, and stories behind the world's most iconic vehicles.
           </p>
           <button className="glass-panel h-14 px-8 rounded-full inline-flex items-center justify-center font-medium transition-all duration-500 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-white/10 group bg-background/50 dark:bg-black/30 backdrop-blur-md">
@@ -201,7 +201,7 @@ function EditorialContentGrid() {
               </div>
               <div className="p-6 flex flex-col flex-1 relative bg-background/50 dark:bg-black/20 backdrop-blur-md group-hover:bg-background/80 dark:group-hover:bg-black/40 transition-colors duration-700">
                 <div className="transition-transform duration-700 ease-[0.16,1,0.3,1] group-hover:-translate-y-1">
-                  <span className="font-bold tracking-[0.15em] uppercase mb-3 block text-[10px] text-foreground/50">
+                  <span className="font-bold tracking-[0.15em] uppercase mb-3 block text-[10px] text-white/60">
                     {article.cat}
                   </span>
                   <h4 className="font-semibold leading-tight mb-2 pr-6 text-xl">
@@ -213,7 +213,7 @@ function EditorialContentGrid() {
                   </div>
                 </div>
                 <div className="absolute right-6 top-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                  <ArrowRight className="w-5 h-5 text-foreground/80" />
+                  <ArrowRight className="w-5 h-5 text-white/80" />
                 </div>
               </div>
             </motion.div>
@@ -261,7 +261,7 @@ function AutomotiveTimeline() {
               <div className="glass-panel p-8 rounded-[32px] group hover:bg-foreground/5 transition-colors duration-700 cursor-pointer border border-foreground/5 hover:border-foreground/20">
                 <h3 className="font-semibold mb-4 group-hover:text-foreground transition-colors text-xl md:text-2xl lg:text-4xl">{decade.year}</h3>
                 <p className="font-medium text-xl text-foreground">{decade.title}</p>
-                <div className="mt-8 flex items-center gap-2 font-semibold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-sm text-foreground/50">
+                <div className="mt-8 flex items-center gap-2 font-semibold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-sm text-white/60">
                   Explore Decade <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -301,7 +301,7 @@ function PopularStories() {
           >
             <div className="flex justify-between items-start mb-6">
               <span className="font-bold tracking-[0.2em] uppercase text-[10px] text-foreground/40">0{i + 1}</span>
-              <div className="flex items-center gap-1.5 font-semibold bg-foreground/5 px-3 py-1.5 rounded-full text-xs text-foreground/50">
+              <div className="flex items-center gap-1.5 font-semibold bg-foreground/5 px-3 py-1.5 rounded-full text-xs text-white/60">
                 <Eye className="w-3.5 h-3.5" /> {item.views} views
               </div>
             </div>

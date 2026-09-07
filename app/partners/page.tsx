@@ -57,8 +57,8 @@ function PartnershipHero() {
           unoptimized
         />
         {/* Dark Corporate Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent dark:from-[#050505] dark:via-[#050505]/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent dark:from-[#050505]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/70 to-transparent dark:from-[#050505] dark:via-[#050505]/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent dark:from-[#050505]/80" />
       </motion.div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col justify-center h-full">
@@ -68,13 +68,13 @@ function PartnershipHero() {
           transition={{ delay: 0.8, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl"
         >
-          <span className="font-bold tracking-[0.25em] uppercase dark:text-white/70 mb-8 block drop-shadow-md text-[10px] md:text-xs text-foreground/70 dark:text-white/70">
+          <span className="font-bold tracking-[0.25em] uppercase mb-8 block drop-shadow-md text-[10px] md:text-xs text-white/70">
             Partnership Platform
           </span>
-          <h1 className="font-semibold leading-[1.05] tracking-tight dark:text-white drop-shadow-xl mb-8 text-4xl md:text-6xl lg:text-[80px]">
+          <h1 className="text-white font-semibold leading-[1.05] tracking-tight  drop-shadow-xl mb-8 text-4xl md:text-6xl lg:text-[80px]">
             Connect With The World's Most Passionate Automotive Community.
           </h1>
-          <p className="font-medium dark:text-white/70 leading-relaxed mb-12 max-w-2xl text-lg md:text-xl lg:text-2xl">
+          <p className="text-white/70 font-medium leading-relaxed mb-12 max-w-2xl text-lg md:text-xl lg:text-2xl">
             Classic Cars transforms a 650K+ enthusiast audience into a premium automotive media ecosystem.
           </p>
           
@@ -183,7 +183,7 @@ function AudienceProfile() {
                 <profile.icon className="w-5 h-5 opacity-80" strokeWidth={1.5} />
               </div>
               <h3 className="font-semibold mb-3 tracking-tight text-xl">{profile.title}</h3>
-              <p className="font-medium leading-relaxed text-foreground/60 text-sm">{profile.desc}</p>
+              <p className="text-white/70 font-medium leading-relaxed text-foreground/60 text-sm">{profile.desc}</p>
             </motion.div>
           ))}
         </div>
