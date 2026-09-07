@@ -74,13 +74,13 @@ function GarageHero() {
           transition={{ delay: 0.6, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-2xl"
         >
-          <span className="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-white/80 mb-6 block drop-shadow-md">
+          <span className="font-bold tracking-[0.25em] uppercase mb-6 block drop-shadow-md text-[10px] md:text-xs text-white/80">
             MY GARAGE
           </span>
-          <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-white drop-shadow-xl mb-6">
+          <h1 className="font-semibold leading-[1.05] tracking-tight drop-shadow-xl mb-6 text-3xl md:text-5xl lg:text-7xl">
             Your Automotive Collection.
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-white/80 leading-relaxed mb-8 max-w-xl">
+          <p className="font-medium leading-relaxed mb-8 max-w-xl text-lg md:text-xl lg:text-2xl">
             Save legends, build collections, and create your personal archive of automotive icons.
           </p>
         </motion.div>
@@ -126,10 +126,10 @@ function GarageSummaryPanel() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, i) => (
           <div key={i} className="flex flex-col border-l-2 border-foreground/5 pl-6 first:border-l-0 first:pl-0">
-            <div className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-2">
+            <div className="font-semibold tracking-tight mb-2 text-2xl md:text-4xl lg:text-5xl">
               <Counter value={stat.value} />
             </div>
-            <div className="text-sm font-semibold tracking-wider uppercase text-foreground/50">
+            <div className="font-semibold tracking-wider uppercase text-sm text-foreground/50">
               {stat.label}
             </div>
           </div>
@@ -149,24 +149,24 @@ function CollectorProfilePreview() {
     >
       <div className="flex justify-between items-start mb-6">
         <div className="w-16 h-16 rounded-full bg-gradient-to-br from-gray-200 to-gray-400 dark:from-gray-700 dark:to-gray-900 overflow-hidden relative shadow-inner">
-          <div className="absolute inset-0 bg-foreground/10 flex items-center justify-center text-foreground font-semibold text-xl">A</div>
+          <div className="absolute inset-0 bg-foreground/10 flex items-center justify-center font-semibold text-foreground text-xl">A</div>
         </div>
         <button className="w-10 h-10 rounded-full glass-panel !bg-foreground/5 flex items-center justify-center hover:bg-foreground/10 transition-colors">
           <Settings className="w-4 h-4 text-foreground/70" />
         </button>
       </div>
       <div>
-        <h3 className="text-xl font-semibold tracking-tight mb-1">Alex's Archive</h3>
-        <p className="text-sm font-medium text-foreground/60 mb-6">Premium Collector</p>
+        <h3 className="font-semibold tracking-tight mb-1 text-xl">Alex's Archive</h3>
+        <p className="font-medium mb-6 text-sm text-foreground/60">Premium Collector</p>
         
         <div className="space-y-3 pt-6 border-t border-foreground/10">
           <div className="flex justify-between items-center">
-            <span className="text-xs font-semibold tracking-widest uppercase text-foreground/40">Fav. Marque</span>
-            <span className="text-sm font-medium">Porsche</span>
+            <span className="font-semibold tracking-widest uppercase text-xs text-foreground/40">Fav. Marque</span>
+            <span className="font-medium text-sm">Porsche</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-xs font-semibold tracking-widest uppercase text-foreground/40">Est. Value</span>
-            <span className="text-sm font-medium blur-sm group-hover:blur-0 transition-all duration-500 cursor-default" title="Estimated value based on current auction prices">$12.5M</span>
+            <span className="font-semibold tracking-widest uppercase text-xs text-foreground/40">Est. Value</span>
+            <span className="font-medium blur-sm group-hover:blur-0 transition-all duration-500 cursor-default text-sm" title="Estimated value based on current auction prices">$12.5M</span>
           </div>
         </div>
       </div>
@@ -196,10 +196,10 @@ function FeaturedCollections({ onOpenCreate }: { onOpenCreate: () => void }) {
   return (
     <section className="w-full mb-24">
       <div className="flex justify-between items-end mb-10">
-        <h2 className="text-3xl font-semibold tracking-tight">Your Collections</h2>
+        <h2 className="font-semibold tracking-tight text-xl md:text-2xl lg:text-3xl">Your Collections</h2>
         <button 
           onClick={onOpenCreate}
-          className="h-10 px-6 rounded-full glass-panel !bg-foreground/5 text-sm font-semibold hover:bg-foreground/10 transition-colors flex items-center gap-2"
+          className="h-10 px-6 rounded-full glass-panel !bg-foreground/5 font-semibold hover:bg-foreground/10 transition-colors flex items-center gap-2 text-sm"
         >
           <Plus className="w-4 h-4" /> Create New
         </button>
@@ -233,10 +233,10 @@ function FeaturedCollections({ onOpenCreate }: { onOpenCreate: () => void }) {
             </div>
             
             <div className="p-6 relative bg-background/50 dark:bg-black/20 backdrop-blur-md">
-              <h3 className="text-xl font-semibold mb-1 group-hover:text-foreground/80 transition-colors">{col.title}</h3>
-              <p className="text-sm font-medium text-foreground/50">{col.count} Vehicles</p>
+              <h3 className="font-semibold mb-1 group-hover:text-foreground/80 transition-colors text-xl group-hover:text-foreground/80">{col.title}</h3>
+              <p className="font-medium text-sm text-foreground/50">{col.count} Vehicles</p>
               
-              <div className="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 shadow-lg">
+              <div className="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-foreground flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 shadow-lg text-background">
                 <ArrowRight className="w-4 h-4" />
               </div>
             </div>
@@ -262,8 +262,8 @@ function DreamGarageFeature() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[300px] bg-foreground/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-foreground/40 mb-6">If You Could Own Any Car...</h2>
-        <h3 className="text-4xl md:text-5xl font-semibold tracking-tight mb-16">Current Dream Garage</h3>
+        <h2 className="font-bold tracking-[0.2em] uppercase mb-6 text-sm text-foreground/40">If You Could Own Any Car...</h2>
+        <h3 className="font-semibold tracking-tight mb-16 text-2xl md:text-4xl lg:text-5xl">Current Dream Garage</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {cars.map((car, i) => (
@@ -285,10 +285,10 @@ function DreamGarageFeature() {
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-700" />
                 <div className="absolute top-4 right-4 w-10 h-10 rounded-full glass-panel !bg-background/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <Star className="w-4 h-4 text-white fill-white" />
+                  <Star className="w-4 h-4 fill-white text-white" />
                 </div>
               </div>
-              <h4 className="text-lg font-semibold tracking-tight group-hover:text-foreground/70 transition-colors">{car.name}</h4>
+              <h4 className="font-semibold tracking-tight group-hover:text-foreground/70 transition-colors text-lg group-hover:text-foreground/70">{car.name}</h4>
             </motion.div>
           ))}
         </div>
@@ -299,17 +299,17 @@ function DreamGarageFeature() {
 
 function MyVehicleGrid() {
   const saved = [
-    { name: "Ferrari F40", year: "1987", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" },
-    { name: "Porsche 959", year: "1986", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop" },
-    { name: "Mercedes 300SL", year: "1954", img: "https://images.unsplash.com/photo-1566008885218-90abf9200ddb?q=80&w=800&auto=format&fit=crop" },
-    { name: "Lamborghini Miura", year: "1966", img: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=800&auto=format&fit=crop" }
+    { name: "Ferrari F40 LM", year: "1989", img: "/assets/images/ferrari-f40-lm.jpeg" },
+    { name: "Koenigsegg CCR", year: "2004", img: "/assets/images/koenigsegg-ccr.jpeg" },
+    { name: "Mercedes E63", year: "2021", img: "/assets/images/mercedes-e63.jpeg" },
+    { name: "Lamborghini Miura", year: "1966", img: "/assets/images/lamborghini-miura.jpeg" }
   ];
 
   return (
     <section className="w-full mb-32">
       <div className="flex justify-between items-end mb-10">
-        <h2 className="text-3xl font-semibold tracking-tight">Saved Legends</h2>
-        <button className="text-sm font-semibold text-foreground/50 hover:text-foreground transition-colors flex items-center gap-1">
+        <h2 className="font-semibold tracking-tight text-xl md:text-2xl lg:text-3xl">Saved Legends</h2>
+        <button className="font-semibold hover:text-foreground transition-colors flex items-center gap-1 text-sm text-foreground/50 hover:text-foreground">
           View All <ChevronRight className="w-4 h-4" />
         </button>
       </div>
@@ -331,18 +331,19 @@ function MyVehicleGrid() {
                 fill 
                 className="object-cover transition-transform duration-[1.5s] group-hover:scale-105 ease-[0.16,1,0.3,1]"
                 referrerPolicy="no-referrer"
+                unoptimized
               />
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500" />
               
               {/* Hover Quick Actions */}
               <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors" title="View">
+                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center hover:bg-white hover:text-black transition-colors text-white hover:text-black" title="View">
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors" title="Add to Collection">
+                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center hover:bg-white hover:text-black transition-colors text-white hover:text-black" title="Add to Collection">
                   <Library className="w-5 h-5" />
                 </button>
-                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center text-white hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors" title="Remove">
+                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors text-white hover:text-white" title="Remove">
                   <Trash2 className="w-5 h-5" />
                 </button>
               </div>
@@ -350,9 +351,9 @@ function MyVehicleGrid() {
             
             <div className="p-6 bg-background/50 dark:bg-black/20 backdrop-blur-md group-hover:bg-background/80 dark:group-hover:bg-black/40 transition-colors duration-500">
               <div className="flex justify-between items-start mb-2">
-                <h4 className="text-lg font-semibold tracking-tight">{car.name}</h4>
+                <h4 className="font-semibold tracking-tight text-lg">{car.name}</h4>
               </div>
-              <p className="text-sm font-medium text-foreground/50">{car.year}</p>
+              <p className="font-medium text-sm text-foreground/50">{car.year}</p>
             </div>
           </motion.div>
         ))}
@@ -363,13 +364,13 @@ function MyVehicleGrid() {
 
 function RecommendedVehicles() {
   const recommendations = [
-    { name: "Ferrari 288 GTO", desc: "Because you saved Ferrari F40", img: "https://images.unsplash.com/photo-1592853625511-84e12e1329a4?q=80&w=600&auto=format&fit=crop" },
-    { name: "Lamborghini Countach", desc: "Because you saved Porsche 959", img: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=600&auto=format&fit=crop" },
+    { name: "Lexus IS500", desc: "Because you saved Mercedes E63", img: "/assets/images/lexus-is500.jpeg" },
+    { name: "Lamborghini Countach", desc: "Because you saved Lamborghini Miura", img: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=600&auto=format&fit=crop" },
   ];
 
   return (
     <section className="w-full pb-32">
-      <h2 className="text-2xl font-semibold tracking-tight mb-8">Based On Your Garage</h2>
+      <h2 className="font-semibold tracking-tight mb-8 text-lg md:text-xl lg:text-2xl">Based On Your Garage</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {recommendations.map((rec, i) => (
@@ -382,17 +383,17 @@ function RecommendedVehicles() {
             className="flex items-center gap-6 glass-panel p-4 pr-8 rounded-[32px] group cursor-pointer border border-foreground/5 hover:border-foreground/20 transition-all duration-500"
           >
             <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-[24px] overflow-hidden relative shrink-0">
-              <Image src={rec.img} alt={rec.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+              <Image src={rec.img} alt={rec.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" unoptimized />
             </div>
             <div>
-              <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-foreground/40 mb-2 block flex items-center gap-1.5">
+              <span className="font-bold tracking-widest uppercase mb-2 block flex items-center gap-1.5 text-[10px] md:text-xs text-foreground/40">
                 <Star className="w-3 h-3 text-foreground/40" /> Recommended
               </span>
-              <h4 className="text-xl font-semibold tracking-tight mb-1">{rec.name}</h4>
-              <p className="text-sm font-medium text-foreground/60">{rec.desc}</p>
+              <h4 className="font-semibold tracking-tight mb-1 text-xl">{rec.name}</h4>
+              <p className="font-medium text-sm text-foreground/60">{rec.desc}</p>
             </div>
             <div className="ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 hidden sm:block">
-              <div className="w-10 h-10 rounded-full bg-foreground text-background flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center text-background">
                 <Plus className="w-4 h-4" />
               </div>
             </div>
@@ -428,34 +429,34 @@ function CreateCollectionModal({ isOpen, onClose }: { isOpen: boolean, onClose: 
               <X className="w-4 h-4 text-foreground/70" />
             </button>
             
-            <h2 className="text-3xl font-semibold tracking-tight mb-8">Create New Collection</h2>
+            <h2 className="font-semibold tracking-tight mb-8 text-xl md:text-2xl lg:text-3xl">Create New Collection</h2>
             
             <div className="space-y-6">
               <div>
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50 mb-3 block">Collection Name</label>
+                <label className="font-bold tracking-widest uppercase mb-3 block text-xs text-foreground/50">Collection Name</label>
                 <input 
                   type="text" 
                   placeholder="e.g. My Dream Garage" 
-                  className="w-full h-14 bg-foreground/5 border border-foreground/10 rounded-2xl px-6 text-foreground font-medium outline-none focus:border-foreground/30 transition-colors"
+                  className="w-full h-14 bg-foreground/5 border border-foreground/10 rounded-2xl px-6 font-medium outline-none focus:border-foreground/30 transition-colors text-foreground"
                   autoFocus
                 />
               </div>
               
               <div>
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50 mb-3 block">Description</label>
+                <label className="font-bold tracking-widest uppercase mb-3 block text-xs text-foreground/50">Description</label>
                 <textarea 
                   placeholder="What makes this collection special?" 
-                  className="w-full h-32 bg-foreground/5 border border-foreground/10 rounded-2xl p-6 text-foreground font-medium outline-none focus:border-foreground/30 transition-colors resize-none"
+                  className="w-full h-32 bg-foreground/5 border border-foreground/10 rounded-2xl p-6 font-medium outline-none focus:border-foreground/30 transition-colors resize-none text-foreground"
                 />
               </div>
               
               <div>
-                <label className="text-xs font-bold tracking-widest uppercase text-foreground/50 mb-3 block">Cover Image</label>
-                <div className="w-full h-32 border-2 border-dashed border-foreground/20 rounded-2xl flex flex-col items-center justify-center text-foreground/40 hover:text-foreground/60 hover:border-foreground/40 transition-colors cursor-pointer group">
+                <label className="font-bold tracking-widest uppercase mb-3 block text-xs text-foreground/50">Cover Image</label>
+                <div className="w-full h-32 border-2 border-dashed border-foreground/20 rounded-2xl flex flex-col items-center justify-center hover:text-foreground/60 hover:border-foreground/40 transition-colors cursor-pointer group text-foreground/40 hover:text-foreground/60">
                   <div className="w-10 h-10 rounded-full bg-foreground/5 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
                     <Plus className="w-5 h-5" />
                   </div>
-                  <span className="text-sm font-medium">Upload custom cover</span>
+                  <span className="font-medium text-sm">Upload custom cover</span>
                 </div>
               </div>
             </div>
@@ -463,7 +464,7 @@ function CreateCollectionModal({ isOpen, onClose }: { isOpen: boolean, onClose: 
             <div className="mt-10 flex justify-end">
               <button 
                 onClick={onClose}
-                className="h-14 px-8 rounded-full bg-foreground text-background font-semibold hover:scale-105 transition-transform shadow-lg"
+                className="h-14 px-8 rounded-full bg-foreground font-semibold hover:scale-105 transition-transform shadow-lg text-background"
               >
                 Create Collection
               </button>

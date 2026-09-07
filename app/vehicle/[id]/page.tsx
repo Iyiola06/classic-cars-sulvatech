@@ -74,7 +74,7 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="text-sm md:text-base font-bold tracking-[0.2em] uppercase text-foreground/70 mb-4 block">
+            <span className="font-bold tracking-[0.2em] uppercase mb-4 block text-sm md:text-base text-foreground/70">
               Legendary Supercar
             </span>
           </motion.div>
@@ -85,10 +85,10 @@ function HeroSection() {
             transition={{ delay: 1.0, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6 mb-4"
           >
-            <h1 className="text-[56px] md:text-[96px] font-semibold leading-[0.9] tracking-[-0.03em] text-foreground">
+            <h1 className="font-semibold leading-[0.9] tracking-[-0.03em] text-4xl md:text-6xl lg:text-[80px]">
               Ferrari F40
             </h1>
-            <span className="text-2xl md:text-4xl font-medium text-foreground/50 tracking-tight">
+            <span className="font-medium tracking-tight text-xl md:text-2xl lg:text-4xl">
               1987 – 1992
             </span>
           </motion.div>
@@ -98,7 +98,7 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="text-xl md:text-2xl font-medium text-foreground/70 leading-relaxed max-w-xl">
+            <p className="font-medium leading-relaxed max-w-xl text-lg md:text-xl lg:text-2xl">
               "The last Ferrari personally approved by Enzo Ferrari."
             </p>
           </motion.div>
@@ -122,7 +122,7 @@ function HeroSection() {
               className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex flex-col items-center justify-center gap-1 hover:bg-foreground/10 transition-colors relative group/btn"
               title={action.label}
             >
-              <action.icon className="w-5 h-5 text-foreground/80 group-hover/btn:text-foreground group-hover/btn:scale-110 transition-all duration-300" />
+              <action.icon className="w-5 h-5 group-hover/btn:text-foreground group-hover/btn:scale-110 transition-all duration-300 text-foreground/80 group-hover/btn:text-foreground" />
             </button>
           ))}
         </motion.div>
@@ -152,8 +152,8 @@ function QuickDataSection() {
             transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="glass-panel shrink-0 w-[240px] p-6 rounded-3xl snap-start border border-foreground/5 dark:border-white/10 flex flex-col justify-between h-[140px] hover:-translate-y-1 transition-transform duration-500"
           >
-            <span className="text-sm font-semibold tracking-wider uppercase text-foreground/50">{spec.label}</span>
-            <span className="text-2xl font-medium tracking-tight">{spec.value}</span>
+            <span className="font-semibold tracking-wider uppercase text-sm text-foreground/50">{spec.label}</span>
+            <span className="font-medium tracking-tight text-lg md:text-xl lg:text-2xl">{spec.value}</span>
           </motion.div>
         ))}
       </div>
@@ -176,7 +176,7 @@ function HistoryTimeline() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="text-4xl md:text-5xl font-semibold tracking-tight mb-16"
+        className="font-semibold tracking-tight mb-16 text-2xl md:text-4xl lg:text-5xl"
       >
         The Story
       </motion.h2>
@@ -193,8 +193,8 @@ function HistoryTimeline() {
               className="relative pl-10 pb-16 last:pb-0 group"
             >
               <div className="absolute left-[-5px] top-2 w-2.5 h-2.5 rounded-full bg-foreground/20 group-hover:bg-foreground group-hover:scale-150 transition-all duration-500 shadow-[0_0_10px_rgba(0,0,0,0)] group-hover:shadow-[0_0_15px_var(--foreground)]" />
-              <h3 className="text-3xl font-semibold tracking-tight mb-3 group-hover:text-foreground/80 transition-colors">{event.year}</h3>
-              <p className="text-xl text-foreground/60 font-medium leading-relaxed">{event.text}</p>
+              <h3 className="font-semibold tracking-tight mb-3 group-hover:text-foreground/80 transition-colors text-xl md:text-2xl lg:text-3xl">{event.year}</h3>
+              <p className="font-medium leading-relaxed text-xl text-foreground/60">{event.text}</p>
             </motion.div>
           ))}
         </div>
@@ -235,7 +235,7 @@ function EngineeringSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-semibold tracking-tight mb-20 text-center max-w-3xl mx-auto"
+          className="font-semibold tracking-tight mb-20 max-w-3xl mx-auto text-3xl md:text-4xl lg:text-6xl"
         >
           Engineering Without Compromise
         </motion.h2>
@@ -248,10 +248,10 @@ function EngineeringSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 1.0, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="glass-panel p-10 rounded-[32px] text-center group hover:bg-foreground/5 transition-colors duration-700"
+              className="glass-panel p-10 rounded-[32px] group hover:bg-foreground/5 transition-colors duration-700 text-center"
             >
-              <h4 className="text-sm font-semibold tracking-[0.15em] uppercase text-foreground/50 mb-6">{spec.label}</h4>
-              <p className="text-3xl lg:text-4xl font-medium tracking-tight">{spec.value}</p>
+              <h4 className="font-semibold tracking-[0.15em] uppercase mb-6 text-sm text-foreground/50">{spec.label}</h4>
+              <p className="font-medium tracking-tight text-xl md:text-2xl lg:text-4xl">{spec.value}</p>
             </motion.div>
           ))}
         </div>
@@ -308,7 +308,7 @@ function ImageGallery() {
           >
             <button 
               onClick={() => setSelectedImage(null)}
-              className="absolute top-8 right-8 w-14 h-14 glass-panel rounded-full flex items-center justify-center text-foreground hover:bg-foreground/10 transition-colors z-10"
+              className="absolute top-8 right-8 w-14 h-14 glass-panel rounded-full flex items-center justify-center hover:bg-foreground/10 transition-colors z-10 text-foreground"
             >
               <X className="w-6 h-6" />
             </button>
@@ -345,7 +345,7 @@ function RelatedVehicles() {
 
   return (
     <section className="w-full max-w-7xl mx-auto px-6 py-20">
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Continue Exploring Legends</h2>
+      <h2 className="font-semibold tracking-tight mb-12 text-xl md:text-2xl lg:text-4xl">Continue Exploring Legends</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {related.map((car, i) => (
           <motion.div
@@ -367,10 +367,10 @@ function RelatedVehicles() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
             <div className="p-6 relative bg-background/50 dark:bg-[#0f0f13]/50 backdrop-blur-md">
-              <h3 className="font-semibold text-xl leading-tight text-foreground mb-1 group-hover:text-foreground/80 transition-colors">{car.name}</h3>
-              <span className="text-sm font-medium text-foreground/50 block mb-4">{car.year}</span>
+              <h3 className="font-semibold leading-tight mb-1 group-hover:text-foreground/80 transition-colors text-xl text-foreground group-hover:text-foreground/80">{car.name}</h3>
+              <span className="font-medium block mb-4 text-sm text-foreground/50">{car.year}</span>
               
-              <div className="flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500">
+              <div className="flex items-center gap-2 font-medium opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-sm">
                 View Specifications <ArrowRight className="w-4 h-4" />
               </div>
             </div>
@@ -391,7 +391,7 @@ function RelatedStories() {
   return (
     <section className="w-full py-20 bg-foreground/[0.02]">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Stories Behind This Machine</h2>
+        <h2 className="font-semibold tracking-tight mb-12 text-xl md:text-2xl lg:text-4xl">Stories Behind This Machine</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stories.map((story, i) => (
             <motion.div
@@ -413,7 +413,7 @@ function RelatedStories() {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold tracking-tight group-hover:text-foreground/70 transition-colors leading-snug">
+              <h3 className="font-semibold tracking-tight group-hover:text-foreground/70 transition-colors leading-snug text-xl group-hover:text-foreground/70">
                 {story.title}
               </h3>
             </motion.div>
@@ -432,19 +432,19 @@ function UserCollectionCTA() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-5xl mx-auto glass-panel rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden"
+        className="max-w-5xl mx-auto glass-panel rounded-[40px] p-12 md:p-20 relative overflow-hidden text-center"
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-foreground/5 blur-[100px] rounded-full pointer-events-none" />
         
         <div className="relative z-10">
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-10 max-w-2xl mx-auto">
+          <h2 className="font-semibold tracking-tight mb-10 max-w-2xl mx-auto text-2xl md:text-4xl lg:text-5xl">
             Add This Legend To Your Garage.
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="h-14 px-10 rounded-full bg-foreground text-background font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+            <button className="h-14 px-10 rounded-full bg-foreground font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2 text-background">
               <Bookmark className="w-5 h-5" /> Save Vehicle
             </button>
-            <button className="h-14 px-10 rounded-full border border-foreground/20 text-foreground font-semibold hover:bg-foreground/5 transition-colors flex items-center justify-center gap-2">
+            <button className="h-14 px-10 rounded-full border border-foreground/20 font-semibold hover:bg-foreground/5 transition-colors flex items-center justify-center gap-2 text-foreground">
               <Plus className="w-5 h-5" /> Create Collection
             </button>
           </div>

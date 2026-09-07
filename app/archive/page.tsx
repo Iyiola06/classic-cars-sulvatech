@@ -62,13 +62,13 @@ function ArchiveHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="text-sm font-semibold tracking-widest uppercase text-foreground/60 mb-6 block">
+          <span className="font-semibold tracking-widest uppercase mb-6 block text-sm text-foreground/60">
             The Automotive Encyclopedia
           </span>
-          <h1 className="text-[52px] md:text-[72px] font-semibold leading-[1.05] tracking-[-0.02em] mb-4">
+          <h1 className="font-semibold leading-[1.05] tracking-[-0.02em] mb-4 text-4xl md:text-6xl lg:text-[80px]">
             Explore Every Legend.
           </h1>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-12">
+          <p className="max-w-2xl mx-auto leading-relaxed mb-12 text-xl text-foreground/70">
             Discover the history, engineering, and stories behind the world's most iconic vehicles.
           </p>
         </motion.div>
@@ -91,7 +91,7 @@ function ArchiveHero() {
             <input
               type="text"
               placeholder="Search Ferrari, Porsche, classic racers, rare vehicles..."
-              className="flex-1 h-full bg-transparent border-none outline-none px-6 text-lg md:text-xl font-medium placeholder:text-foreground/40 text-foreground"
+              className="flex-1 h-full bg-transparent border-none outline-none px-6 font-medium placeholder:text-foreground/40 text-lg md:text-xl placeholder:text-foreground/40 text-foreground"
               onFocus={() => setSearchActive(true)}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -102,10 +102,10 @@ function ArchiveHero() {
               </button>
             )}
             <div className="flex items-center gap-2 pl-4 border-l border-foreground/10 shrink-0">
-              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 text-foreground/60 transition-colors">
+              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-foreground/60">
                 <Mic className="w-5 h-5" />
               </button>
-              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 text-foreground/60 transition-colors">
+              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-foreground/60">
                 <SlidersHorizontal className="w-5 h-5" />
               </button>
             </div>
@@ -118,26 +118,26 @@ function ArchiveHero() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.98 }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute top-[112px] left-0 w-full glass-panel !bg-background/95 dark:!bg-[#0f0f13]/95 rounded-[32px] p-8 text-left shadow-2xl border border-foreground/10"
+                className="absolute top-[112px] left-0 w-full glass-panel !bg-background/95 dark:!bg-[#0f0f13]/95 rounded-[32px] p-8 shadow-2xl border border-foreground/10 text-left"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div>
-                    <h4 className="text-sm font-semibold tracking-wider uppercase text-foreground/50 mb-4">Popular Searches</h4>
+                    <h4 className="font-semibold tracking-wider uppercase mb-4 text-sm text-foreground/50">Popular Searches</h4>
                     <div className="flex flex-wrap gap-3">
                       {popularSearches.map((item) => (
-                        <button key={item} className="px-4 py-2 rounded-full glass-panel !bg-foreground/5 hover:!bg-foreground/10 text-sm font-medium transition-colors">
+                        <button key={item} className="px-4 py-2 rounded-full glass-panel !bg-foreground/5 hover:!bg-foreground/10 font-medium transition-colors text-sm">
                           {item}
                         </button>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold tracking-wider uppercase text-foreground/50 mb-4">Trending</h4>
+                    <h4 className="font-semibold tracking-wider uppercase mb-4 text-sm text-foreground/50">Trending</h4>
                     <div className="flex flex-col gap-2">
                       {trendingSearches.map((item) => (
-                        <button key={item} className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-foreground/5 transition-colors text-left group">
-                          <Search className="w-4 h-4 text-foreground/40 group-hover:text-foreground/70 transition-colors" />
-                          <span className="font-medium text-foreground/80 group-hover:text-foreground transition-colors">{item}</span>
+                        <button key={item} className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-foreground/5 transition-colors group text-left">
+                          <Search className="w-4 h-4 group-hover:text-foreground/70 transition-colors text-foreground/40 group-hover:text-foreground/70" />
+                          <span className="font-medium group-hover:text-foreground transition-colors text-foreground/80 group-hover:text-foreground">{item}</span>
                         </button>
                       ))}
                     </div>
@@ -184,7 +184,7 @@ function FilterSystem() {
           {subFilters.map((sub) => (
             <button 
               key={sub}
-              className="px-5 py-2.5 rounded-full glass-panel !bg-foreground/5 border border-foreground/10 hover:!bg-foreground/10 text-sm font-medium whitespace-nowrap transition-colors"
+              className="px-5 py-2.5 rounded-full glass-panel !bg-foreground/5 border border-foreground/10 hover:!bg-foreground/10 font-medium whitespace-nowrap transition-colors text-sm"
             >
               {sub}
             </button>
@@ -207,7 +207,7 @@ function FeaturedCollections() {
   return (
     <section className="w-full py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-10">
-        <h2 className="text-3xl font-semibold tracking-tight">Curated Collections</h2>
+        <h2 className="font-semibold tracking-tight text-xl md:text-2xl lg:text-3xl">Curated Collections</h2>
       </div>
       
       <div className="flex gap-6 overflow-x-auto px-6 pb-12 hide-scrollbar snap-x snap-mandatory" style={{ scrollPaddingLeft: '24px' }}>
@@ -232,12 +232,12 @@ function FeaturedCollections() {
             
             <div className="absolute bottom-6 left-6 right-6">
               <div className="glass-panel !bg-white/10 dark:!bg-black/20 !border-white/20 p-6 rounded-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:!bg-white/20 dark:group-hover:!bg-black/40">
-                <h3 className="text-white font-semibold text-xl mb-3 leading-tight">{col.title}</h3>
-                <div className="flex items-center gap-4 text-white/70 text-xs font-medium mb-4 overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+                <h3 className="font-semibold mb-3 leading-tight text-white text-xl">{col.title}</h3>
+                <div className="flex items-center gap-4 font-medium mb-4 overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-white/70 text-xs">
                   <span className="bg-white/10 px-3 py-1.5 rounded-full">{col.count} Vehicles</span>
                   <span>{col.years}</span>
                 </div>
-                <div className="flex items-center gap-2 text-white font-medium text-sm group-hover:text-white/90">
+                <div className="flex items-center gap-2 font-medium group-hover:text-white/90 text-white text-sm group-hover:text-white/90">
                   Explore Collection <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -264,10 +264,10 @@ function VehicleGrid() {
   return (
     <section className="w-full max-w-7xl mx-auto px-6 py-12">
       <div className="flex justify-between items-end mb-10">
-        <h2 className="text-3xl font-semibold tracking-tight">Archive Results <span className="text-foreground/40 text-xl font-medium ml-2">2,419 vehicles</span></h2>
+        <h2 className="font-semibold tracking-tight text-xl md:text-2xl lg:text-3xl">Archive Results <span className="font-medium ml-2 text-foreground/40 text-xl">2,419 vehicles</span></h2>
         <div className="hidden md:flex gap-4">
            {/* Future sorting dropdown area, kept minimal for design */}
-           <span className="text-sm font-medium text-foreground/50">Sort by: Relevancy</span>
+           <span className="font-medium text-sm text-foreground/50">Sort by: Relevancy</span>
         </div>
       </div>
       
@@ -294,16 +294,16 @@ function VehicleGrid() {
             
             <div className="p-5 flex flex-col flex-1 bg-background/50 dark:bg-[#0f0f13]/50 backdrop-blur-md relative z-10 transition-colors duration-500">
               <div className="flex justify-between items-start mb-2">
-                <h3 className="font-semibold text-lg leading-tight text-foreground">{car.name}</h3>
-                <span className="text-xs font-bold px-2 py-1 rounded-full bg-foreground/5 text-foreground/60">{car.year}</span>
+                <h3 className="font-semibold leading-tight text-lg text-foreground">{car.name}</h3>
+                <span className="font-bold px-2 py-1 rounded-full bg-foreground/5 text-xs text-foreground/60">{car.year}</span>
               </div>
               
-              <span className="text-sm font-medium text-foreground/50 mb-auto">{car.cat}</span>
+              <span className="font-medium mb-auto text-sm text-foreground/50">{car.cat}</span>
               
               <div className="flex items-center gap-2 mt-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 absolute bottom-5 left-5 right-5">
-                <span className="text-xs font-medium px-2.5 py-1.5 rounded-lg bg-foreground/10 text-foreground">{car.spec1}</span>
-                <span className="text-xs font-medium px-2.5 py-1.5 rounded-lg bg-foreground/10 text-foreground">{car.spec2}</span>
-                <div className="ml-auto w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center">
+                <span className="font-medium px-2.5 py-1.5 rounded-lg bg-foreground/10 text-xs text-foreground">{car.spec1}</span>
+                <span className="font-medium px-2.5 py-1.5 rounded-lg bg-foreground/10 text-xs text-foreground">{car.spec2}</span>
+                <div className="ml-auto w-8 h-8 rounded-full bg-foreground flex items-center justify-center text-background">
                    <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -332,10 +332,10 @@ function ArchiveIntelligence() {
     <section className="w-full max-w-7xl mx-auto px-6 py-24 mt-12 border-t border-foreground/5">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+          <h2 className="font-semibold tracking-tight mb-6 text-2xl md:text-4xl lg:text-5xl">
             The World's Automotive Knowledge, Organized.
           </h2>
-          <p className="text-xl text-foreground/60 leading-relaxed max-w-lg">
+          <p className="leading-relaxed max-w-lg text-xl text-foreground/60">
             Every technical specification, production history, and editorial story seamlessly connected within our proprietary archive.
           </p>
         </div>
@@ -350,8 +350,8 @@ function ArchiveIntelligence() {
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className={`glass-panel p-8 rounded-[32px] ${i === 2 ? 'sm:col-span-2' : ''}`}
             >
-              <h3 className="text-4xl font-semibold mb-2">{stat.number}</h3>
-              <p className="text-foreground/60 font-medium">{stat.label}</p>
+              <h3 className="font-semibold mb-2 text-xl md:text-2xl lg:text-4xl">{stat.number}</h3>
+              <p className="font-medium text-foreground/60">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -378,16 +378,16 @@ function BottomCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-10 glass-panel !bg-black/40 !border-white/10 p-12 md:p-16 rounded-[40px] text-center max-w-3xl w-[90%] md:w-full backdrop-blur-xl"
+          className="relative z-10 glass-panel !bg-black/40 !border-white/10 p-12 md:p-16 rounded-[40px] max-w-3xl w-[90%] md:w-full backdrop-blur-xl text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-6">
+          <h2 className="font-semibold tracking-tight mb-6 text-2xl md:text-4xl lg:text-5xl">
             Find Your Next Automotive Obsession.
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <button className="h-14 px-8 rounded-full bg-white text-black font-semibold hover:bg-white/90 transition-colors">
+            <button className="h-14 px-8 rounded-full bg-white font-semibold hover:bg-white/90 transition-colors text-black">
               Explore Vehicles
             </button>
-            <button className="h-14 px-8 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">
+            <button className="h-14 px-8 rounded-full border border-white/30 font-semibold hover:bg-white/10 transition-colors text-white">
               Create Your Garage
             </button>
           </div>

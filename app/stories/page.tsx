@@ -66,13 +66,13 @@ function EditorialHero() {
           transition={{ delay: 0.6, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl"
         >
-          <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-foreground/80 dark:text-white/80 mb-6 block drop-shadow-md">
+          <span className="font-bold tracking-[0.2em] uppercase dark:text-white/80 mb-6 block drop-shadow-md text-xs md:text-sm text-foreground/80 dark:text-white/80">
             Featured Story
           </span>
-          <h1 className="text-[52px] md:text-[88px] font-semibold leading-[0.95] tracking-[-0.03em] text-foreground dark:text-white drop-shadow-xl mb-6">
+          <h1 className="font-semibold leading-[0.95] tracking-[-0.03em] dark:text-white drop-shadow-xl mb-6 text-4xl md:text-6xl lg:text-[80px]">
             The Machines That Defined Generations
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-foreground/80 dark:text-white/80 leading-relaxed mb-8 max-w-2xl drop-shadow-md">
+          <p className="font-medium dark:text-white/80 leading-relaxed mb-8 max-w-2xl drop-shadow-md text-lg md:text-xl lg:text-2xl">
             Explore the engineering, history, and stories behind the world's most iconic vehicles.
           </p>
           <button className="glass-panel h-14 px-8 rounded-full inline-flex items-center justify-center font-medium transition-all duration-500 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-white/10 group bg-background/50 dark:bg-black/30 backdrop-blur-md">
@@ -114,8 +114,8 @@ function StoryCategories() {
                 : 'border-transparent hover:border-foreground/10 hover:bg-foreground/5 scale-95 opacity-70 hover:opacity-100'
             }`}
           >
-            <span className="text-sm font-semibold tracking-widest uppercase mb-1">{cat.name}</span>
-            <span className="text-xs font-medium text-foreground/60 transition-all duration-500 overflow-hidden" style={{ maxHeight: active === cat.name ? '40px' : '0px', opacity: active === cat.name ? 1 : 0 }}>
+            <span className="font-semibold tracking-widest uppercase mb-1 text-sm">{cat.name}</span>
+            <span className="font-medium transition-all duration-500 overflow-hidden text-xs text-foreground/60" style={{ maxHeight: active === cat.name ? '40px' : '0px', opacity: active === cat.name ? 1 : 0 }}>
               {cat.desc}
             </span>
           </motion.button>
@@ -157,19 +157,19 @@ function EditorialContentGrid() {
             
             <div className="absolute bottom-0 left-0 right-0 p-8 z-10 glass-panel !bg-background/80 dark:!bg-[#0f0f13]/80 !rounded-none !border-x-0 !border-b-0 !border-t-white/10 backdrop-blur-2xl transition-colors duration-700 group-hover:!bg-background/90 dark:group-hover:!bg-[#0f0f13]/95">
               <div className="transition-transform duration-700 ease-[0.16,1,0.3,1] group-hover:-translate-y-2">
-                <div className="flex items-center gap-4 mb-4 text-xs font-bold tracking-[0.15em] uppercase">
+                <div className="flex items-center gap-4 mb-4 font-bold tracking-[0.15em] uppercase text-xs">
                   <span className="text-foreground">Design</span>
-                  <span className="text-foreground/40 flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" /> 10 MIN READ</span>
-                  <span className="text-foreground/40 flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5" /> OCT 15</span>
+                  <span className="flex items-center gap-1.5 text-foreground/40"><Clock className="w-3.5 h-3.5" /> 10 MIN READ</span>
+                  <span className="flex items-center gap-1.5 text-foreground/40"><Calendar className="w-3.5 h-3.5" /> OCT 15</span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-semibold leading-tight tracking-tight mb-3 pr-12">
+                <h3 className="font-semibold leading-tight tracking-tight mb-3 pr-12 text-xl md:text-2xl lg:text-4xl">
                   The Art of the Analog Driving Experience
                 </h3>
-                <p className="text-foreground/70 font-medium max-w-2xl text-lg">
+                <p className="font-medium max-w-2xl text-foreground/70 text-lg">
                   Why modern collectors are abandoning digital perfection for the visceral, unfiltered connection of classic manual gearboxes and naturally aspirated engines.
                 </p>
                 <div className="absolute right-8 top-12 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-full bg-foreground text-background flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center shadow-lg text-background">
                     <ArrowRight className="w-5 h-5" />
                   </div>
                 </div>
@@ -201,13 +201,13 @@ function EditorialContentGrid() {
               </div>
               <div className="p-6 flex flex-col flex-1 relative bg-background/50 dark:bg-black/20 backdrop-blur-md group-hover:bg-background/80 dark:group-hover:bg-black/40 transition-colors duration-700">
                 <div className="transition-transform duration-700 ease-[0.16,1,0.3,1] group-hover:-translate-y-1">
-                  <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-foreground/50 mb-3 block">
+                  <span className="font-bold tracking-[0.15em] uppercase mb-3 block text-[10px] text-foreground/50">
                     {article.cat}
                   </span>
-                  <h4 className="text-xl font-semibold leading-tight mb-2 pr-6">
+                  <h4 className="font-semibold leading-tight mb-2 pr-6 text-xl">
                     {article.title}
                   </h4>
-                  <div className="flex items-center gap-4 text-[10px] font-bold tracking-wider text-foreground/40 mt-auto pt-4">
+                  <div className="flex items-center gap-4 font-bold tracking-wider mt-auto pt-4 text-[10px] text-foreground/40">
                     <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" /> {article.time}</span>
                     <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" /> {article.date}</span>
                   </div>
@@ -240,7 +240,7 @@ function AutomotiveTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-semibold tracking-tight mb-16"
+          className="font-semibold tracking-tight mb-16 text-xl md:text-2xl lg:text-4xl"
         >
           Decades Of Automotive Evolution
         </motion.h2>
@@ -259,9 +259,9 @@ function AutomotiveTimeline() {
               className="shrink-0 w-[280px] md:w-[320px] snap-start relative z-10"
             >
               <div className="glass-panel p-8 rounded-[32px] group hover:bg-foreground/5 transition-colors duration-700 cursor-pointer border border-foreground/5 hover:border-foreground/20">
-                <h3 className="text-4xl font-semibold mb-4 text-foreground/80 group-hover:text-foreground transition-colors">{decade.year}</h3>
-                <p className="text-xl font-medium text-foreground">{decade.title}</p>
-                <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-foreground/50 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                <h3 className="font-semibold mb-4 group-hover:text-foreground transition-colors text-xl md:text-2xl lg:text-4xl">{decade.year}</h3>
+                <p className="font-medium text-xl text-foreground">{decade.title}</p>
+                <div className="mt-8 flex items-center gap-2 font-semibold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-sm text-foreground/50">
                   Explore Decade <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -286,7 +286,7 @@ function PopularStories() {
         <div className="w-10 h-10 rounded-full glass-panel !bg-foreground/5 flex items-center justify-center text-foreground">
           <TrendingUp className="w-5 h-5" />
         </div>
-        <h2 className="text-3xl font-semibold tracking-tight">Trending Among Enthusiasts</h2>
+        <h2 className="font-semibold tracking-tight text-xl md:text-2xl lg:text-3xl">Trending Among Enthusiasts</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -300,12 +300,12 @@ function PopularStories() {
             className="glass-panel p-8 rounded-[32px] border border-foreground/5 hover:border-foreground/15 transition-all duration-700 cursor-pointer group hover:-translate-y-1"
           >
             <div className="flex justify-between items-start mb-6">
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/40">0{i + 1}</span>
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-foreground/50 bg-foreground/5 px-3 py-1.5 rounded-full">
+              <span className="font-bold tracking-[0.2em] uppercase text-[10px] text-foreground/40">0{i + 1}</span>
+              <div className="flex items-center gap-1.5 font-semibold bg-foreground/5 px-3 py-1.5 rounded-full text-xs text-foreground/50">
                 <Eye className="w-3.5 h-3.5" /> {item.views} views
               </div>
             </div>
-            <h3 className="text-2xl font-semibold leading-tight group-hover:text-foreground/70 transition-colors pr-4">
+            <h3 className="font-semibold leading-tight group-hover:text-foreground/70 transition-colors pr-4 text-lg md:text-xl lg:text-2xl">
               {item.title}
             </h3>
           </motion.div>
@@ -323,15 +323,15 @@ function NewsletterExperience() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-7xl mx-auto glass-panel rounded-[40px] p-12 md:p-24 text-center relative overflow-hidden border border-foreground/10"
+        className="max-w-7xl mx-auto glass-panel rounded-[40px] p-12 md:p-24 relative overflow-hidden border border-foreground/10 text-center"
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[150%] bg-foreground/5 blur-[120px] rounded-full pointer-events-none transform -rotate-12" />
         
         <div className="relative z-10 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6">
+          <h2 className="font-semibold tracking-tight mb-6 text-3xl md:text-4xl lg:text-6xl">
             Receive The World's Greatest Automotive Stories.
           </h2>
-          <p className="text-xl font-medium text-foreground/60 mb-12">
+          <p className="font-medium mb-12 text-xl text-foreground/60">
             Weekly stories, rare vehicles, and automotive history delivered directly to your inbox.
           </p>
           
@@ -339,9 +339,9 @@ function NewsletterExperience() {
             <input 
               type="email" 
               placeholder="Enter your email address" 
-              className="flex-1 bg-transparent border-none outline-none px-6 h-14 text-foreground placeholder:text-foreground/40 font-medium"
+              className="flex-1 bg-transparent border-none outline-none px-6 h-14 placeholder:text-foreground/40 font-medium text-foreground placeholder:text-foreground/40"
             />
-            <button className="h-14 px-8 rounded-full bg-foreground text-background font-semibold hover:opacity-90 transition-opacity">
+            <button className="h-14 px-8 rounded-full bg-foreground font-semibold hover:opacity-90 transition-opacity text-background">
               Join The Archive
             </button>
           </div>
@@ -360,20 +360,20 @@ function Footer() {
             <div className="w-8 h-8 rounded-full relative overflow-hidden">
                <Image src="/assets/images/logo.jpeg" alt="Logo" fill className="object-cover" unoptimized />
             </div>
-            <span className="font-semibold text-xl tracking-tight">Classic Cars</span>
+            <span className="font-semibold tracking-tight text-xl">Classic Cars</span>
           </div>
           
-          <div className="flex flex-wrap gap-8 text-sm font-semibold text-foreground/60">
-            <a href="#" className="hover:text-foreground transition-colors">Explore</a>
-            <a href="#" className="hover:text-foreground transition-colors">Archive</a>
-            <a href="#" className="hover:text-foreground transition-colors">Stories</a>
-            <a href="#" className="hover:text-foreground transition-colors">Partners</a>
-            <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
-            <a href="#" className="hover:text-foreground transition-colors">Twitter</a>
+          <div className="flex flex-wrap gap-8 font-semibold text-sm text-foreground/60">
+            <a href="#" className="hover:text-foreground transition-colors hover:text-foreground">Explore</a>
+            <a href="#" className="hover:text-foreground transition-colors hover:text-foreground">Archive</a>
+            <a href="#" className="hover:text-foreground transition-colors hover:text-foreground">Stories</a>
+            <a href="#" className="hover:text-foreground transition-colors hover:text-foreground">Partners</a>
+            <a href="#" className="hover:text-foreground transition-colors hover:text-foreground">Instagram</a>
+            <a href="#" className="hover:text-foreground transition-colors hover:text-foreground">Twitter</a>
           </div>
         </div>
         
-        <div className="flex justify-between items-center pt-8 border-t border-foreground/10 text-xs font-semibold text-foreground/40 tracking-wider uppercase">
+        <div className="flex justify-between items-center pt-8 border-t border-foreground/10 font-semibold tracking-wider uppercase text-xs text-foreground/40">
           <p>© {new Date().getFullYear()} Classic Cars Archive.</p>
           <p>The Global Automotive Publication.</p>
         </div>

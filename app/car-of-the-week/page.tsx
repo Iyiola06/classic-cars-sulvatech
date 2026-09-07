@@ -68,7 +68,7 @@ function EditorialHero() {
         transition={{ delay: 1.0, duration: 1.5 }}
         className="relative z-10"
       >
-        <div className="text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-white/90 drop-shadow-md">
+        <div className="font-bold tracking-[0.3em] uppercase drop-shadow-md text-xs md:text-sm text-white/90">
           <span className="bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent">Car Of The Week</span>
           <div className="mt-2 text-white/60">Edition: <span className="text-white">#002</span></div>
         </div>
@@ -82,10 +82,10 @@ function EditorialHero() {
           transition={{ delay: 1.0, duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-4xl"
         >
-          <h1 className="text-[60px] md:text-[110px] font-semibold leading-[0.9] tracking-[-0.04em] text-white drop-shadow-xl mb-6">
+          <h1 className="font-semibold leading-[0.9] tracking-[-0.04em] drop-shadow-xl mb-6 text-4xl md:text-6xl lg:text-[80px]">
             AMG CLA 45
           </h1>
-          <p className="text-2xl md:text-4xl font-medium text-white/80 tracking-tight drop-shadow-md max-w-2xl">
+          <p className="font-medium tracking-tight drop-shadow-md max-w-2xl text-xl md:text-2xl lg:text-4xl">
             "The world's most powerful production four-cylinder engine."
           </p>
         </motion.div>
@@ -99,22 +99,22 @@ function EditorialHero() {
         className="relative z-10 glass-panel !bg-black/30 dark:!bg-[#111]/40 !border-white/20 rounded-[32px] p-8 w-full max-w-[420px] h-[220px] flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500 backdrop-blur-2xl"
       >
         <div className="flex justify-between items-start">
-          <h3 className="text-2xl font-semibold text-white group-hover:text-white transition-colors">Mercedes-AMG CLA 45</h3>
-          <span className="text-white/60 font-medium px-3 py-1 rounded-full bg-white/10 text-sm">Present</span>
+          <h3 className="font-semibold group-hover:text-white transition-colors text-lg md:text-xl lg:text-2xl">Mercedes-AMG CLA 45</h3>
+          <span className="font-medium px-3 py-1 rounded-full bg-white/10 text-white/60 text-sm">Present</span>
         </div>
         
         <div className="grid grid-cols-2 gap-y-4 gap-x-2">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 block mb-1">Engine</span>
-            <span className="text-white font-medium">2.0L Turbo I4</span>
+            <span className="uppercase tracking-[0.2em] font-bold block mb-1 text-[10px] text-white/50">Engine</span>
+            <span className="font-medium text-white">2.0L Turbo I4</span>
           </div>
           <div>
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 block mb-1">Power</span>
-            <span className="text-white font-medium">416 HP</span>
+            <span className="uppercase tracking-[0.2em] font-bold block mb-1 text-[10px] text-white/50">Power</span>
+            <span className="font-medium text-white">416 HP</span>
           </div>
           <div className="col-span-2">
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 block mb-1">0-60 MPH</span>
-            <span className="text-white font-medium">4.0 Seconds</span>
+            <span className="uppercase tracking-[0.2em] font-bold block mb-1 text-[10px] text-white/50">0-60 MPH</span>
+            <span className="font-medium text-white">4.0 Seconds</span>
           </div>
         </div>
       </motion.div>
@@ -132,8 +132,8 @@ function StoryIntroduction() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="text-3xl md:text-5xl font-medium leading-[1.2] tracking-tight text-foreground relative">
-            <span className="absolute -left-6 md:-left-10 top-0 text-foreground/20 text-5xl md:text-7xl font-serif">"</span>
+          <h2 className="font-medium leading-[1.2] tracking-tight relative text-2xl md:text-4xl lg:text-5xl">
+            <span className="absolute -left-6 md:-left-10 top-0 font-serif text-3xl md:text-5xl lg:text-7xl">"</span>
             Redefining what's possible from a four-cylinder powerplant, the AMG CLA 45 is a testament to modern engineering.
           </h2>
         </motion.div>
@@ -143,7 +143,7 @@ function StoryIntroduction() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.0, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col gap-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-medium"
+          className="flex flex-col gap-8 leading-relaxed font-medium text-lg md:text-xl text-foreground/70"
         >
           <p>
             It challenges the notion that massive displacement is required for supercar-level performance. The hand-built M139 engine proves that meticulous craftsmanship and advanced turbocharging can yield astonishing results.
@@ -176,11 +176,11 @@ function WhyItMatters() {
             transition={{ duration: 0.8, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="glass-panel p-10 md:p-12 rounded-[40px] group hover:-translate-y-2 transition-transform duration-700"
           >
-            <div className="w-16 h-16 rounded-full glass-panel !bg-foreground/5 flex items-center justify-center mb-8 text-foreground group-hover:scale-110 transition-transform duration-500">
+            <div className="w-16 h-16 rounded-full glass-panel !bg-foreground/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 text-foreground">
               <card.icon className="w-8 h-8 opacity-80" strokeWidth={1.5} />
             </div>
-            <h3 className="text-2xl font-semibold tracking-tight mb-4">{card.title}</h3>
-            <p className="text-foreground/60 font-medium leading-relaxed">{card.desc}</p>
+            <h3 className="font-semibold tracking-tight mb-4 text-lg md:text-xl lg:text-2xl">{card.title}</h3>
+            <p className="font-medium leading-relaxed text-foreground/60">{card.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -204,7 +204,7 @@ function TimelineExperience() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-semibold tracking-tight mb-20"
+          className="font-semibold tracking-tight mb-20 text-2xl md:text-4xl lg:text-5xl"
         >
           The Journey
         </motion.h2>
@@ -220,18 +220,18 @@ function TimelineExperience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.8, delay: i * 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-start md:items-center text-left md:text-center group relative w-full md:w-1/4"
+                className="flex flex-col items-start md:items-center group relative w-full md:w-1/4 text-left md:text-center"
               >
                 {/* Desktop connection node */}
                 <div className="hidden md:flex w-6 h-6 rounded-full bg-background border-4 border-foreground/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center group-hover:border-foreground/50 transition-colors duration-500 z-10">
                   <div className="w-2 h-2 rounded-full bg-transparent group-hover:bg-foreground group-hover:shadow-[0_0_12px_var(--foreground)] transition-all duration-500" />
                 </div>
 
-                <h3 className="text-5xl font-semibold mb-4 md:mb-12 group-hover:text-foreground/80 transition-colors">{item.year}</h3>
+                <h3 className="font-semibold mb-4 md:mb-12 group-hover:text-foreground/80 transition-colors text-2xl md:text-4xl lg:text-5xl">{item.year}</h3>
                 
                 <div className="md:mt-12 glass-panel p-6 rounded-3xl w-full">
-                  <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                  <p className="text-foreground/60 text-sm font-medium">{item.desc}</p>
+                  <h4 className="font-semibold mb-2 text-lg">{item.title}</h4>
+                  <p className="font-medium text-foreground/60 text-sm">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -263,10 +263,10 @@ function SpecificationExperience() {
             transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
             className={`glass-panel p-10 md:p-12 rounded-[40px] flex flex-col justify-center items-start group hover:bg-foreground/5 transition-colors duration-700 ${spec.col}`}
           >
-            <span className="text-xs md:text-sm font-bold tracking-[0.2em] uppercase text-foreground/40 mb-4 block">
+            <span className="font-bold tracking-[0.2em] uppercase mb-4 block text-xs md:text-sm text-foreground/40">
               {spec.label}
             </span>
-            <span className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-none group-hover:scale-105 transition-transform duration-700 origin-left">
+            <span className="font-semibold tracking-tight leading-none group-hover:scale-105 transition-transform duration-700 origin-left text-3xl md:text-4xl lg:text-6xl">
               {spec.value}
             </span>
           </motion.div>
@@ -323,7 +323,7 @@ function PhotoExperience() {
           >
             <button 
               onClick={() => setSelectedImage(null)}
-              className="absolute top-8 right-8 w-14 h-14 glass-panel rounded-full flex items-center justify-center text-foreground hover:bg-foreground/10 transition-colors z-10"
+              className="absolute top-8 right-8 w-14 h-14 glass-panel rounded-full flex items-center justify-center hover:bg-foreground/10 transition-colors z-10 text-foreground"
             >
               <X className="w-6 h-6" />
             </button>
@@ -362,7 +362,7 @@ function CollectorInsight() {
   return (
     <section className="w-full max-w-7xl mx-auto px-6 py-24">
       <div className="glass-panel p-10 md:p-16 rounded-[40px] border border-foreground/5 shadow-2xl">
-        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-16 text-center">Why Collectors Still Chase It</h2>
+        <h2 className="font-semibold tracking-tight mb-16 text-2xl md:text-4xl lg:text-5xl">Why Collectors Still Chase It</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 max-w-4xl mx-auto">
           {ratings.map((rating, i) => (
@@ -374,7 +374,7 @@ function CollectorInsight() {
               transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-foreground/10 pb-6"
             >
-              <span className="text-lg md:text-xl font-medium text-foreground/80">{rating.label}</span>
+              <span className="font-medium text-lg md:text-xl text-foreground/80">{rating.label}</span>
               <div className="flex items-center gap-1">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <Star key={j} className={`w-6 h-6 ${j < rating.score ? 'fill-foreground text-foreground' : 'fill-foreground/10 text-foreground/10'}`} />
@@ -397,7 +397,7 @@ function RelatedLegends() {
 
   return (
     <section className="w-full max-w-7xl mx-auto px-6 py-20">
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-12">Continue Exploring</h2>
+      <h2 className="font-semibold tracking-tight mb-12 text-xl md:text-2xl lg:text-4xl">Continue Exploring</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {related.map((car, i) => (
           <motion.div
@@ -419,10 +419,10 @@ function RelatedLegends() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               
               <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="font-semibold text-2xl leading-tight text-white mb-2 group-hover:text-white/90 transition-colors">{car.name}</h3>
+                <h3 className="font-semibold leading-tight mb-2 group-hover:text-white/90 transition-colors text-lg md:text-xl lg:text-2xl">{car.name}</h3>
                 <div className="h-0 overflow-hidden group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                  <p className="text-white/70 text-sm font-medium mb-4">{car.desc}</p>
-                  <div className="flex items-center gap-2 text-sm font-medium text-white">
+                  <p className="font-medium mb-4 text-white/70 text-sm">{car.desc}</p>
+                  <div className="flex items-center gap-2 font-medium text-sm text-white">
                     Explore Legend <ChevronRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -454,11 +454,11 @@ function ReturnCTA() {
         />
         <div className="absolute inset-0 bg-black/50" />
         
-        <div className="relative z-10 glass-panel !bg-black/30 !border-white/10 p-12 md:p-20 rounded-[40px] text-center max-w-4xl w-[90%] md:w-full backdrop-blur-2xl">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-8">
+        <div className="relative z-10 glass-panel !bg-black/30 !border-white/10 p-12 md:p-20 rounded-[40px] max-w-4xl w-[90%] md:w-full backdrop-blur-2xl text-center">
+          <h2 className="font-semibold tracking-tight mb-8 text-3xl md:text-4xl lg:text-6xl">
             Discover A New Automotive Legend Every Week.
           </h2>
-          <button className="h-16 px-12 rounded-full bg-white text-black text-lg font-semibold hover:bg-white/90 transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-3 mx-auto shadow-2xl">
+          <button className="h-16 px-12 rounded-full bg-white font-semibold hover:bg-white/90 transition-transform duration-300 hover:scale-105 flex items-center justify-center gap-3 mx-auto shadow-2xl text-black text-lg">
             Follow Car Of The Week <ArrowRight className="w-5 h-5" />
           </button>
         </div>
