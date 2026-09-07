@@ -5,19 +5,31 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useTheme } from 'next-themes';
 import { Search, User, Moon, Sun, Menu, X, Warehouse } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { label: 'Explore', href: '/' },
     { label: 'Archive', href: '/archive' },
     { label: 'Stories', href: '/stories' },
-    { label: 'Community', href: '#' },
+    { label: 'Community', href: '/community' },
     { label: 'Partners', href: '/partners' },
   ];
 
@@ -27,7 +39,9 @@ export default function Navigation() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl h-[72px] z-50 glass-panel rounded-full flex items-center justify-between px-6 md:px-8"
+        className={`fixed top-8 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl h-[72px] z-50 rounded-full flex items-center justify-between px-6 md:px-8 transition-all duration-300 ${
+          isScrolled ? 'glass-panel shadow-lg' : 'bg-transparent'
+        }`}
       >
         <motion.div 
           initial={{ left: '-100%', opacity: 0 }}
@@ -37,9 +51,8 @@ export default function Navigation() {
         />
         
         <Link href="/" className="flex items-center gap-2 group cursor-pointer relative z-10">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-300 to-gray-600 dark:from-gray-600 dark:to-gray-900 flex items-center justify-center shadow-inner relative overflow-hidden">
-             <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-             <span className="text-white text-xs font-bold font-serif">CC</span>
+          <div className="w-8 h-8 rounded-full relative overflow-hidden">
+             <Image src="/assets/images/logo.jpeg" alt="Logo" fill className="object-cover" unoptimized />
           </div>
           <span className="font-semibold text-lg tracking-tight">Classic Cars</span>
         </Link>
@@ -53,7 +66,10 @@ export default function Navigation() {
         </div>
 
         <div className="flex items-center gap-2 md:gap-4 relative z-10">
-          <button className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-foreground/10 transition-colors">
+          <button 
+            onClick={() => setIsSearchOpen(true)}
+            className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-foreground/10 transition-colors"
+          >
             <Search className="w-4 h-4" />
           </button>
           {mounted && (
@@ -64,13 +80,13 @@ export default function Navigation() {
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
           )}
-          <button className="hidden md:flex relative w-10 h-10 rounded-full items-center justify-center hover:bg-foreground/10 transition-colors">
+          <Link href="/garage" className="hidden md:flex relative w-10 h-10 rounded-full items-center justify-center hover:bg-foreground/10 transition-colors">
             <Warehouse className="w-4 h-4" />
             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-background"></span>
-          </button>
-          <button className="hidden md:flex w-10 h-10 rounded-full items-center justify-center hover:bg-foreground/10 transition-colors">
+          </Link>
+          <Link href="/profile" className="hidden md:flex w-10 h-10 rounded-full items-center justify-center hover:bg-foreground/10 transition-colors">
             <User className="w-4 h-4" />
-          </button>
+          </Link>
           <button 
             className="md:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-foreground/10 transition-colors"
             onClick={() => setIsMobileMenuOpen(true)}
@@ -92,8 +108,8 @@ export default function Navigation() {
           >
             <div className="flex justify-between items-center mb-16">
               <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-300 to-gray-600 dark:from-gray-600 dark:to-gray-900 flex items-center justify-center shadow-inner">
-                  <span className="text-white text-xs font-bold font-serif">CC</span>
+                <div className="w-8 h-8 rounded-full relative overflow-hidden">
+                   <Image src="/assets/images/logo.jpeg" alt="Logo" fill className="object-cover" unoptimized />
                 </div>
                 <span className="font-semibold text-lg tracking-tight">Classic Cars</span>
               </Link>
@@ -131,10 +147,40 @@ export default function Navigation() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-auto pt-8 flex items-center gap-6 text-sm font-medium text-foreground/50 uppercase tracking-widest"
             >
-              <button className="hover:text-foreground transition-colors flex items-center gap-2">
+              <Link href="/profile" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-foreground transition-colors flex items-center gap-2">
                 <User className="w-4 h-4" /> Sign In
-              </button>
+              </Link>
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* Search Overlay */}
+      <AnimatePresence>
+        {isSearchOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 left-0 w-full bg-background/95 backdrop-blur-xl z-[110] border-b border-foreground/10"
+          >
+            <div className="max-w-7xl mx-auto px-6 h-32 flex items-center gap-6">
+              <Search className="w-8 h-8 text-foreground/40" />
+              <input 
+                type="text"
+                autoFocus
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search models, brands, or eras..."
+                className="flex-1 bg-transparent text-2xl md:text-4xl outline-none placeholder:text-foreground/20 font-serif"
+              />
+              <button 
+                onClick={() => setIsSearchOpen(false)}
+                className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/10 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -43,21 +43,21 @@ function EditorialHero() {
     <section className="relative h-[95vh] min-h-[700px] w-full flex flex-col justify-between overflow-hidden pt-32 pb-12 px-6 lg:px-12">
       {/* Cinematic Background */}
       <motion.div
-        initial={{ opacity: 0, scale: 1.05 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2.5, ease: "easeOut" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2.0, ease: "linear" }}
         className="absolute inset-0 z-0"
       >
-        <Image 
-          src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2400&auto=format&fit=crop"
-          alt="Ferrari F40 Car of the Week"
-          fill
-          className="object-cover object-center"
-          priority
-          referrerPolicy="no-referrer"
+        <video 
+          src="/assets/videos/amg-cla45.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="object-cover w-full h-full"
         />
         {/* Dark Editorial Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-black/20 to-black/40 dark:from-[#050505] dark:via-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-black/10 to-transparent dark:from-[#050505]/90 dark:via-black/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent dark:from-[#050505]/80" />
       </motion.div>
 
@@ -70,7 +70,7 @@ function EditorialHero() {
       >
         <div className="text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-white/90 drop-shadow-md">
           <span className="bg-gradient-to-r from-gray-200 to-gray-500 bg-clip-text text-transparent">Car Of The Week</span>
-          <div className="mt-2 text-white/60">Edition: <span className="text-white">#001</span></div>
+          <div className="mt-2 text-white/60">Edition: <span className="text-white">#002</span></div>
         </div>
       </motion.div>
 
@@ -83,10 +83,10 @@ function EditorialHero() {
           className="max-w-4xl"
         >
           <h1 className="text-[60px] md:text-[110px] font-semibold leading-[0.9] tracking-[-0.04em] text-white drop-shadow-xl mb-6">
-            Ferrari F40
+            AMG CLA 45
           </h1>
           <p className="text-2xl md:text-4xl font-medium text-white/80 tracking-tight drop-shadow-md max-w-2xl">
-            "The final Ferrari approved by Enzo Ferrari."
+            "The world's most powerful production four-cylinder engine."
           </p>
         </motion.div>
       </div>
@@ -99,22 +99,22 @@ function EditorialHero() {
         className="relative z-10 glass-panel !bg-black/30 dark:!bg-[#111]/40 !border-white/20 rounded-[32px] p-8 w-full max-w-[420px] h-[220px] flex flex-col justify-between group hover:-translate-y-2 transition-all duration-500 backdrop-blur-2xl"
       >
         <div className="flex justify-between items-start">
-          <h3 className="text-2xl font-semibold text-white group-hover:text-white transition-colors">Ferrari F40</h3>
-          <span className="text-white/60 font-medium px-3 py-1 rounded-full bg-white/10 text-sm">1987–1992</span>
+          <h3 className="text-2xl font-semibold text-white group-hover:text-white transition-colors">Mercedes-AMG CLA 45</h3>
+          <span className="text-white/60 font-medium px-3 py-1 rounded-full bg-white/10 text-sm">Present</span>
         </div>
         
         <div className="grid grid-cols-2 gap-y-4 gap-x-2">
           <div>
             <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 block mb-1">Engine</span>
-            <span className="text-white font-medium">2.9L Twin Turbo V8</span>
+            <span className="text-white font-medium">2.0L Turbo I4</span>
           </div>
           <div>
             <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 block mb-1">Power</span>
-            <span className="text-white font-medium">471 HP</span>
+            <span className="text-white font-medium">416 HP</span>
           </div>
           <div className="col-span-2">
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 block mb-1">Rarity</span>
-            <span className="text-white font-medium">1,311 Units Produced</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 block mb-1">0-60 MPH</span>
+            <span className="text-white font-medium">4.0 Seconds</span>
           </div>
         </div>
       </motion.div>
@@ -134,7 +134,7 @@ function StoryIntroduction() {
         >
           <h2 className="text-3xl md:text-5xl font-medium leading-[1.2] tracking-tight text-foreground relative">
             <span className="absolute -left-6 md:-left-10 top-0 text-foreground/20 text-5xl md:text-7xl font-serif">"</span>
-            Created to celebrate Ferrari's 40th anniversary, the F40 became a symbol of pure mechanical emotion.
+            Redefining what's possible from a four-cylinder powerplant, the AMG CLA 45 is a testament to modern engineering.
           </h2>
         </motion.div>
         
@@ -146,10 +146,10 @@ function StoryIntroduction() {
           className="flex flex-col gap-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-medium"
         >
           <p>
-            It was a time before electronic driving aids, sequential gearboxes, and hybrid powertrains. The mandate was uncompromising: build the fastest, most thrilling road car in existence. 
+            It challenges the notion that massive displacement is required for supercar-level performance. The hand-built M139 engine proves that meticulous craftsmanship and advanced turbocharging can yield astonishing results.
           </p>
           <p>
-            The F40 wasn't just a supercar; it was a race car thinly veiled for the street. Utilizing advanced composite materials like Kevlar and carbon fiber, it stripped away every unnecessary luxury to achieve an astonishingly low weight, cementing its legacy as one of the most visceral driving experiences ever engineered.
+            The CLA 45 isn't just a compact sedan; it's a precision instrument. With its sophisticated 4MATIC+ all-wheel-drive system and aggressive aerodynamics, it delivers a visceral, high-revving driving experience that pushes the boundaries of its class.
           </p>
         </motion.div>
       </div>

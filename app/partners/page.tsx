@@ -405,8 +405,8 @@ function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-300 to-gray-600 dark:from-gray-600 dark:to-gray-900 flex items-center justify-center shadow-inner">
-              <span className="text-white text-xs font-bold font-serif">CC</span>
+            <div className="w-8 h-8 rounded-full relative overflow-hidden">
+               <Image src="/assets/images/logo.jpeg" alt="Logo" fill className="object-cover" unoptimized />
             </div>
             <span className="font-semibold text-xl tracking-tight">Classic Cars</span>
           </div>

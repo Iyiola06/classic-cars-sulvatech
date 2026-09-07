@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { useTheme } from 'next-themes';
-import { Search, User, Moon, Sun, ArrowRight } from 'lucide-react';
+import { Search, User, Moon, Sun, ArrowRight, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import Navigation from '@/components/navigation';
 
@@ -23,34 +23,47 @@ export default function Home() {
 
 
 function HeroSection() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center pt-28 pb-12">
+      {/* Preloader */}
+      <div 
+        className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background transition-opacity duration-1000 ${
+          isVideoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
+      >
+        <div className="w-16 h-16 rounded-full relative overflow-hidden mb-6 shadow-xl shadow-foreground/10">
+          <Image src="/assets/images/logo.jpeg" alt="Logo" fill className="object-cover" unoptimized />
+        </div>
+        <Loader2 className="w-6 h-6 animate-spin text-foreground/40" />
+      </div>
+
       <motion.div
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1.03 }}
-        transition={{ 
-          opacity: { delay: 0.6, duration: 0.6, ease: "linear" },
-          scale: { delay: 1.2, duration: 10, ease: "easeOut" }
-        }}
+        initial={{ opacity: 0 }}
+        animate={isVideoLoaded ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 1.0, ease: "linear" }}
         className="absolute inset-0 z-0"
       >
-        <Image 
-          src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2400&auto=format&fit=crop"
-          alt="Classic Ferrari F40"
-          fill
-          className="object-cover"
-          priority
-          referrerPolicy="no-referrer"
+        <video 
+          src="/assets/videos/Ferrari LaFerrari  4K.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          onCanPlay={() => setIsVideoLoaded(true)}
+          className="object-cover w-full h-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent dark:from-[#050505] dark:via-[#050505]/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent dark:from-[#050505]/90 dark:via-[#050505]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60" />
       </motion.div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-12 gap-6 items-center">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          animate={isVideoLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col gap-6"
         >
           <span className="text-sm font-semibold tracking-widest uppercase text-foreground/60">
@@ -77,8 +90,8 @@ function HeroSection() {
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.0, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          animate={isVideoLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="hidden lg:block absolute bottom-12 right-6 xl:right-0 w-[380px]"
         >
           <div className="glass-panel rounded-2xl p-4 group cursor-pointer transition-all hover:-translate-y-2">
@@ -88,19 +101,19 @@ function HeroSection() {
             </div>
             <div className="relative h-[160px] w-full rounded-xl overflow-hidden mb-4 z-10">
               <Image 
-                src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800&auto=format&fit=crop"
-                alt="Ferrari F40 Thumbnail"
+                src="/assets/images/ferrari-f40-lm.jpeg"
+                alt="Ferrari F40 LM"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                referrerPolicy="no-referrer"
+                unoptimized
               />
             </div>
             <div className="px-2 pb-2 relative z-10">
-              <h3 className="text-xl font-semibold mb-3">Ferrari F40</h3>
+              <h3 className="text-xl font-semibold mb-3">Ferrari F40 LM</h3>
               <div className="flex items-center gap-2">
                 <span className="text-xs font-medium px-3 py-1.5 rounded-lg bg-foreground/5 border border-foreground/10">Twin Turbo V8</span>
-                <span className="text-xs font-medium px-3 py-1.5 rounded-lg bg-foreground/5 border border-foreground/10">471 HP</span>
-                <span className="text-xs font-medium px-3 py-1.5 rounded-lg bg-foreground/5 border border-foreground/10">201 mph</span>
+                <span className="text-xs font-medium px-3 py-1.5 rounded-lg bg-foreground/5 border border-foreground/10">720 HP</span>
+                <span className="text-xs font-medium px-3 py-1.5 rounded-lg bg-foreground/5 border border-foreground/10">229 mph</span>
               </div>
             </div>
           </div>
@@ -140,11 +153,11 @@ function TrustSection() {
 
 function CollectionSection() {
   const cards = [
-    { title: "Classic Icons", desc: "The foundation of automotive history.", img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" },
-    { title: "Supercars", desc: "Pushing the limits of engineering.", img: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?q=80&w=800&auto=format&fit=crop" },
-    { title: "Rare Collections", desc: "One-of-one unicorns of the road.", img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" },
-    { title: "Motorsport Legends", desc: "Born on the track.", img: "https://images.unsplash.com/photo-1566008885218-90abf9200ddb?q=80&w=800&auto=format&fit=crop" },
-    { title: "Future Classics", desc: "Modern marvels destined for greatness.", img: "https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?q=80&w=800&auto=format&fit=crop" },
+    { title: "Classic Icons", desc: "The foundation of automotive history.", img: "/assets/images/lamborghini-miura.jpeg" },
+    { title: "Supercars", desc: "Pushing the limits of engineering.", img: "/assets/images/koenigsegg-ccr.jpeg" },
+    { title: "Rare Collections", desc: "One-of-one unicorns of the road.", img: "/assets/images/lexus-is500.jpeg" },
+    { title: "Motorsport Legends", desc: "Born on the track.", img: "/assets/images/ferrari-f40-lm.jpeg" },
+    { title: "Future Classics", desc: "Modern marvels destined for greatness.", img: "/assets/images/mercedes-e63.jpeg" },
   ];
 
   return (
@@ -203,11 +216,11 @@ function EditorialSection() {
         >
           <div className="relative w-full h-[500px] rounded-3xl overflow-hidden mb-6 border border-foreground/5">
             <Image 
-              src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1600&auto=format&fit=crop" 
+              src="/assets/images/ferrari-f40-lm.jpeg" 
               alt="Feature Story" 
               fill 
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
-              referrerPolicy="no-referrer"
+              unoptimized
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
             <div className="absolute top-6 left-6 glass-panel !bg-black/40 !border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
@@ -220,9 +233,9 @@ function EditorialSection() {
 
         <div className="lg:col-span-4 flex flex-col gap-6">
           {[
-            { cat: "Heritage", title: "The Golden Era Of Analog Supercars", time: "5 min read", img: "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=600&auto=format&fit=crop" },
-            { cat: "Culture", title: "Inside The World Of Automotive Collectors", time: "12 min read", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=600&auto=format&fit=crop" },
-            { cat: "Design", title: "Sculpted by Wind: The Porsche 959", time: "6 min read", img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=600&auto=format&fit=crop" },
+            { cat: "Heritage", title: "The Golden Era Of Analog Supercars", time: "5 min read", img: "/assets/images/lamborghini-miura.jpeg" },
+            { cat: "Culture", title: "Inside The World Of Automotive Collectors", time: "12 min read", img: "/assets/images/koenigsegg-ccr.jpeg" },
+            { cat: "Design", title: "Sculpted by Wind: Lexus IS 500 F SPORT", time: "6 min read", img: "/assets/images/lexus-is500.jpeg" },
           ].map((story, i) => (
             <motion.div 
               key={i}
@@ -233,7 +246,7 @@ function EditorialSection() {
               className="group cursor-pointer grid grid-cols-3 gap-4 items-center"
             >
               <div className="relative col-span-1 aspect-square rounded-2xl overflow-hidden border border-foreground/5">
-                <Image src={story.img} alt={story.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
+                <Image src={story.img} alt={story.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" unoptimized />
               </div>
               <div className="col-span-2">
                 <span className="text-xs font-bold text-foreground/50 uppercase tracking-wider mb-2 block">{story.cat}</span>
@@ -293,8 +306,8 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="col-span-1 md:col-span-4">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-300 to-gray-600 dark:from-gray-600 dark:to-gray-900 flex items-center justify-center shadow-inner">
-                <span className="text-white text-xs font-bold font-serif">CC</span>
+              <div className="w-8 h-8 rounded-full relative overflow-hidden">
+                <Image src="/assets/images/logo.jpeg" alt="Logo" fill className="object-cover" unoptimized />
               </div>
               <span className="font-semibold text-xl tracking-tight">Classic Cars</span>
             </div>
