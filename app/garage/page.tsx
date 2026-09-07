@@ -236,7 +236,7 @@ function FeaturedCollections({ onOpenCreate }: { onOpenCreate: () => void }) {
               <h3 className="font-semibold mb-1 group-hover:text-foreground/80 transition-colors text-xl group-hover:text-foreground/80">{col.title}</h3>
               <p className="font-medium text-sm text-foreground/50">{col.count} Vehicles</p>
               
-              <div className="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-foreground flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 shadow-lg text-background">
+              <div className="absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-foreground flex items-center justify-center opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-500 shadow-lg text-background">
                 <ArrowRight className="w-4 h-4" />
               </div>
             </div>
@@ -284,8 +284,8 @@ function DreamGarageFeature() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-700" />
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full glass-panel !bg-background/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <Star className="w-4 h-4 fill-white text-white" />
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full glass-panel !bg-foreground/10 backdrop-blur-md flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
+                  <Star className="w-4 h-4 fill-foreground text-foreground" />
                 </div>
               </div>
               <h4 className="font-semibold tracking-tight group-hover:text-foreground/70 transition-colors text-lg group-hover:text-foreground/70">{car.name}</h4>
@@ -336,14 +336,14 @@ function MyVehicleGrid() {
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500" />
               
               {/* Hover Quick Actions */}
-              <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center hover:bg-white hover:text-black transition-colors text-white hover:text-black" title="View">
+              <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500">
+                <button className="w-12 h-12 rounded-full glass-panel !bg-foreground/10 backdrop-blur-xl flex items-center justify-center hover:bg-foreground hover:text-background transition-colors text-foreground" title="View">
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center hover:bg-white hover:text-black transition-colors text-white hover:text-black" title="Add to Collection">
+                <button className="w-12 h-12 rounded-full glass-panel !bg-foreground/10 backdrop-blur-xl flex items-center justify-center hover:bg-foreground hover:text-background transition-colors text-foreground" title="Add to Collection">
                   <Library className="w-5 h-5" />
                 </button>
-                <button className="w-12 h-12 rounded-full glass-panel !bg-background/20 backdrop-blur-xl flex items-center justify-center hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors text-white hover:text-white" title="Remove">
+                <button className="w-12 h-12 rounded-full glass-panel !bg-foreground/10 backdrop-blur-xl flex items-center justify-center hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors text-foreground hover:text-white" title="Remove">
                   <Trash2 className="w-5 h-5" />
                 </button>
               </div>
@@ -392,7 +392,7 @@ function RecommendedVehicles() {
               <h4 className="font-semibold tracking-tight mb-1 text-xl">{rec.name}</h4>
               <p className="font-medium text-sm text-foreground/60">{rec.desc}</p>
             </div>
-            <div className="ml-auto opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 hidden sm:block">
+            <div className="ml-auto opacity-100 translate-x-0 md:opacity-0 md:-translate-x-2 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-500">
               <div className="w-10 h-10 rounded-full bg-foreground flex items-center justify-center text-background">
                 <Plus className="w-4 h-4" />
               </div>

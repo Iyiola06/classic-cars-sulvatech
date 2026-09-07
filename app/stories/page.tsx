@@ -168,7 +168,7 @@ function EditorialContentGrid() {
                 <p className="font-medium max-w-2xl text-foreground/70 text-lg">
                   Why modern collectors are abandoning digital perfection for the visceral, unfiltered connection of classic manual gearboxes and naturally aspirated engines.
                 </p>
-                <div className="absolute right-8 top-12 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+                <div className="absolute right-8 top-12 opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-500">
                   <div className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center shadow-lg text-background">
                     <ArrowRight className="w-5 h-5" />
                   </div>
@@ -201,7 +201,7 @@ function EditorialContentGrid() {
               </div>
               <div className="p-6 flex flex-col flex-1 relative bg-background/50 dark:bg-black/20 backdrop-blur-md group-hover:bg-background/80 dark:group-hover:bg-black/40 transition-colors duration-700">
                 <div className="transition-transform duration-700 ease-[0.16,1,0.3,1] group-hover:-translate-y-1">
-                  <span className="font-bold tracking-[0.15em] uppercase mb-3 block text-[10px] text-white/60">
+                  <span className="font-bold tracking-[0.15em] uppercase mb-3 block text-[10px] text-foreground/60">
                     {article.cat}
                   </span>
                   <h4 className="font-semibold leading-tight mb-2 pr-6 text-xl">
@@ -212,8 +212,8 @@ function EditorialContentGrid() {
                     <span className="flex items-center gap-1.5"><Calendar className="w-3 h-3" /> {article.date}</span>
                   </div>
                 </div>
-                <div className="absolute right-6 top-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                  <ArrowRight className="w-5 h-5 text-white/80" />
+                <div className="absolute right-6 top-6 opacity-100 translate-x-0 md:opacity-0 md:-translate-x-2 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-500">
+                  <ArrowRight className="w-5 h-5 text-foreground/80" />
                 </div>
               </div>
             </motion.div>
@@ -261,7 +261,7 @@ function AutomotiveTimeline() {
               <div className="glass-panel p-8 rounded-[32px] group hover:bg-foreground/5 transition-colors duration-700 cursor-pointer border border-foreground/5 hover:border-foreground/20">
                 <h3 className="font-semibold mb-4 group-hover:text-foreground transition-colors text-xl md:text-2xl lg:text-4xl">{decade.year}</h3>
                 <p className="font-medium text-xl text-foreground">{decade.title}</p>
-                <div className="mt-8 flex items-center gap-2 font-semibold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-sm text-white/60">
+                <div className="mt-8 flex items-center gap-2 font-semibold opacity-100 translate-x-0 md:opacity-0 md:-translate-x-2 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-500 text-sm text-foreground/60">
                   Explore Decade <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -301,7 +301,7 @@ function PopularStories() {
           >
             <div className="flex justify-between items-start mb-6">
               <span className="font-bold tracking-[0.2em] uppercase text-[10px] text-foreground/40">0{i + 1}</span>
-              <div className="flex items-center gap-1.5 font-semibold bg-foreground/5 px-3 py-1.5 rounded-full text-xs text-white/60">
+              <div className="flex items-center gap-1.5 font-semibold bg-foreground/5 px-3 py-1.5 rounded-full text-xs text-foreground/60">
                 <Eye className="w-3.5 h-3.5" /> {item.views} views
               </div>
             </div>

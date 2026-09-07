@@ -419,9 +419,9 @@ function RelatedLegends() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               
               <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="font-semibold leading-tight mb-2 group-hover:text-white/90 transition-colors text-lg md:text-xl lg:text-2xl">{car.name}</h3>
-                <div className="h-0 overflow-hidden group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                  <p className="font-medium mb-4 text-white/70 text-sm">{car.desc}</p>
+                <h3 className="font-semibold leading-tight mb-2 group-hover:text-foreground/90 transition-colors text-lg md:text-xl lg:text-2xl">{car.name}</h3>
+                <div className="h-auto opacity-100 translate-y-0 md:h-0 md:overflow-hidden md:group-hover:h-auto md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 md:translate-y-4 md:group-hover:translate-y-0">
+                  <p className="font-medium mb-4 text-foreground/70 text-sm">{car.desc}</p>
                   <div className="flex items-center gap-2 font-medium text-sm text-white">
                     Explore Legend <ChevronRight className="w-4 h-4" />
                   </div>

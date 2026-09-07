@@ -28,6 +28,7 @@ export default function Navigation() {
   const navItems = [
     { label: 'Explore', href: '/' },
     { label: 'Archive', href: '/archive' },
+    { label: 'Garage', href: '/garage' },
     { label: 'Stories', href: '/stories' },
     { label: 'Community', href: '/community' },
     { label: 'Partners', href: '/partners' },
@@ -143,10 +144,13 @@ export default function Navigation() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="mt-auto pt-8 flex items-center gap-6 text-sm font-medium text-foreground/50 uppercase tracking-widest"
+              className="mt-auto pt-8 flex items-center justify-between text-sm font-medium text-foreground/70 uppercase tracking-widest border-t border-foreground/10"
             >
               <Link href="/profile" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-foreground transition-colors flex items-center gap-2">
                 <User className="w-4 h-4" /> Sign In
+              </Link>
+              <Link href="/signup" onClick={() => setIsMobileMenuOpen(false)} className="px-5 py-2.5 rounded-full bg-foreground text-background font-semibold hover:opacity-90 transition-opacity text-xs tracking-wider normal-case">
+                Sign Up
               </Link>
             </motion.div>
           </motion.div>

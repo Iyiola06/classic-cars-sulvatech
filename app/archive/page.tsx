@@ -102,10 +102,10 @@ function ArchiveHero() {
               </button>
             )}
             <div className="flex items-center gap-2 pl-4 border-l border-foreground/10 shrink-0">
-              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-white/60">
+              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-foreground/60">
                 <Mic className="w-5 h-5" />
               </button>
-              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-white/60">
+              <button className="w-12 h-12 rounded-full flex items-center justify-center hover:bg-foreground/5 transition-colors text-foreground/60">
                 <SlidersHorizontal className="w-5 h-5" />
               </button>
             </div>
@@ -136,7 +136,7 @@ function ArchiveHero() {
                     <div className="flex flex-col gap-2">
                       {trendingSearches.map((item) => (
                         <button key={item} className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-foreground/5 transition-colors group text-left">
-                          <Search className="w-4 h-4 group-hover:text-white/80 transition-colors text-foreground/40 group-hover:text-white/80" />
+                          <Search className="w-4 h-4 group-hover:text-foreground/80 transition-colors text-foreground/40 group-hover:text-foreground/80" />
                           <span className="font-medium group-hover:text-foreground transition-colors text-foreground/80 group-hover:text-foreground">{item}</span>
                         </button>
                       ))}
@@ -170,7 +170,7 @@ function FilterSystem() {
           {filters.map((filter) => (
             <button 
               key={filter.label} 
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${filter.active ? 'bg-foreground text-background shadow-md' : 'text-white/60 hover:text-foreground'}`}
+              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${filter.active ? 'bg-foreground text-background shadow-md' : 'text-foreground/60 hover:text-foreground'}`}
             >
               {filter.label}
             </button>
@@ -233,11 +233,11 @@ function FeaturedCollections() {
             <div className="absolute bottom-6 left-6 right-6">
               <div className="glass-panel !bg-white/10 dark:!bg-black/20 !border-white/20 p-6 rounded-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:!bg-white/20 dark:group-hover:!bg-black/40">
                 <h3 className="font-semibold mb-3 leading-tight text-white text-xl">{col.title}</h3>
-                <div className="flex items-center gap-4 font-medium mb-4 overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-white/70 text-xs">
+                <div className="flex items-center gap-4 font-medium mb-4 overflow-hidden h-auto opacity-100 translate-y-0 md:h-0 md:opacity-0 md:translate-y-4 md:group-hover:h-auto md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 text-foreground/70 text-xs">
                   <span className="bg-white/10 px-3 py-1.5 rounded-full">{col.count} Vehicles</span>
                   <span>{col.years}</span>
                 </div>
-                <div className="flex items-center gap-2 font-medium group-hover:text-white/90 text-white text-sm group-hover:text-white/90">
+                <div className="flex items-center gap-2 font-medium group-hover:text-foreground/90 text-white text-sm group-hover:text-foreground/90">
                   Explore Collection <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
@@ -295,12 +295,12 @@ function VehicleGrid() {
             <div className="p-5 flex flex-col flex-1 bg-background/50 dark:bg-[#0f0f13]/50 backdrop-blur-md relative z-10 transition-colors duration-500">
               <div className="flex justify-between items-start mb-2">
                 <h3 className="font-semibold leading-tight text-lg text-foreground">{car.name}</h3>
-                <span className="font-bold px-2 py-1 rounded-full bg-foreground/5 text-xs text-white/60">{car.year}</span>
+                <span className="font-bold px-2 py-1 rounded-full bg-foreground/5 text-xs text-foreground/60">{car.year}</span>
               </div>
               
               <span className="font-medium mb-auto text-sm text-foreground/50">{car.cat}</span>
               
-              <div className="flex items-center gap-2 mt-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 absolute bottom-5 left-5 right-5">
+              <div className="flex items-center gap-2 mt-4 translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 relative md:absolute md:bottom-5 md:left-5 md:right-5">
                 <span className="font-medium px-2.5 py-1.5 rounded-lg bg-foreground/10 text-xs text-foreground">{car.spec1}</span>
                 <span className="font-medium px-2.5 py-1.5 rounded-lg bg-foreground/10 text-xs text-foreground">{car.spec2}</span>
                 <div className="ml-auto w-8 h-8 rounded-full bg-foreground flex items-center justify-center text-background">
@@ -335,7 +335,7 @@ function ArchiveIntelligence() {
           <h2 className="font-semibold tracking-tight mb-6 text-2xl md:text-4xl lg:text-5xl">
             The World's Automotive Knowledge, Organized.
           </h2>
-          <p className="leading-relaxed max-w-lg text-xl text-white/60">
+          <p className="leading-relaxed max-w-lg text-xl text-foreground/60">
             Every technical specification, production history, and editorial story seamlessly connected within our proprietary archive.
           </p>
         </div>
@@ -351,7 +351,7 @@ function ArchiveIntelligence() {
               className={`glass-panel p-8 rounded-[32px] ${i === 2 ? 'sm:col-span-2' : ''}`}
             >
               <h3 className="font-semibold mb-2 text-xl md:text-2xl lg:text-4xl">{stat.number}</h3>
-              <p className="font-medium text-white/60">{stat.label}</p>
+              <p className="font-medium text-foreground/60">{stat.label}</p>
             </motion.div>
           ))}
         </div>

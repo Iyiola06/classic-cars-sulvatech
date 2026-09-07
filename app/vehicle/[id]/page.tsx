@@ -153,7 +153,7 @@ function QuickDataSection() {
             className="glass-panel shrink-0 w-[240px] p-6 rounded-3xl snap-start border border-foreground/5 dark:border-white/10 flex flex-col justify-between h-[140px] hover:-translate-y-1 transition-transform duration-500"
           >
             <span className="font-semibold tracking-wider uppercase text-sm text-foreground/50">{spec.label}</span>
-            <span className="text-white/80 font-medium tracking-tight text-lg md:text-xl lg:text-2xl">{spec.value}</span>
+            <span className="font-medium tracking-tight text-lg md:text-xl lg:text-2xl text-foreground">{spec.value}</span>
           </motion.div>
         ))}
       </div>
@@ -370,7 +370,7 @@ function RelatedVehicles() {
               <h3 className="font-semibold leading-tight mb-1 group-hover:text-foreground/80 transition-colors text-xl text-foreground group-hover:text-foreground/80">{car.name}</h3>
               <span className="font-medium block mb-4 text-sm text-foreground/50">{car.year}</span>
               
-              <div className="flex items-center gap-2 font-medium opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-sm">
+              <div className="flex items-center gap-2 font-medium opacity-100 translate-x-0 md:opacity-0 md:-translate-x-4 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-500 text-sm">
                 View Specifications <ArrowRight className="w-4 h-4" />
               </div>
             </div>

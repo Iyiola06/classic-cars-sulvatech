@@ -5,13 +5,17 @@ import Navigation from '@/components/navigation';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Check, User, Mail, Lock } from 'lucide-react';
+import { ArrowRight, Check, Shield, Sparkles, User, Mail, Lock, Car } from 'lucide-react';
 
-export default function ProfilePage() {
+export default function SignupPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
+    fullName: '',
     email: '',
+    username: '',
     password: '',
+    favoriteCar: '',
+    agreeTerms: false,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -46,13 +50,13 @@ export default function ProfilePage() {
           {/* Header */}
           <div className="text-center mb-8">
             <span className="font-bold tracking-[0.25em] uppercase text-xs text-foreground/60 block mb-3">
-              Member Portal
+              The Global Automotive Archive
             </span>
             <h1 className="font-serif tracking-tight text-3xl md:text-5xl mb-3">
-              Welcome Back
+              Create Your Account
             </h1>
             <p className="text-foreground/70 text-base md:text-lg max-w-md mx-auto">
-              Sign in to manage your digital garage, review saved legends, and connect with collectors.
+              Join 650K+ enthusiasts. Build your personal digital garage, save legends, and share stories.
             </p>
           </div>
 
@@ -68,9 +72,9 @@ export default function ProfilePage() {
                   <Check className="w-8 h-8" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold mb-2">Signed In Successfully!</h3>
+                  <h3 className="text-2xl font-semibold mb-2">Welcome to Classic Cars!</h3>
                   <p className="text-foreground/70 max-w-sm mx-auto text-sm">
-                    Welcome back to Classic Cars. Your session is active.
+                    Your member account has been created successfully. You can now curate your garage and save automotive legends.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 w-full mt-4">
@@ -78,7 +82,7 @@ export default function ProfilePage() {
                     href="/garage"
                     className="flex-1 py-4 bg-foreground text-background font-semibold rounded-full flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform text-sm"
                   >
-                    Go to My Garage <ArrowRight className="w-4 h-4" />
+                    Open My Garage <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
                     href="/archive"
@@ -92,21 +96,51 @@ export default function ProfilePage() {
               <div>
                 {/* Form Toggle Tabs */}
                 <div className="flex bg-foreground/5 p-1.5 rounded-full mb-8 border border-foreground/10">
+                  <Link
+                    href="/profile"
+                    className="flex-1 text-center py-2.5 rounded-full font-medium text-sm text-foreground/60 hover:text-foreground transition-colors"
+                  >
+                    Sign In
+                  </Link>
                   <button
                     type="button"
                     className="flex-1 text-center py-2.5 rounded-full font-semibold text-sm bg-foreground text-background shadow-md"
                   >
-                    Sign In
-                  </button>
-                  <Link
-                    href="/signup"
-                    className="flex-1 text-center py-2.5 rounded-full font-medium text-sm text-foreground/60 hover:text-foreground transition-colors"
-                  >
                     Sign Up
-                  </Link>
+                  </button>
                 </div>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-2">
+                      <label className="font-medium text-xs text-foreground/80 flex items-center gap-1.5 uppercase tracking-wider">
+                        <User className="w-3.5 h-3.5 text-foreground/50" /> Full Name
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                        placeholder="Enzo Ferrari"
+                        className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-4 py-3 text-sm outline-none focus:border-foreground/40 transition-colors"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <label className="font-medium text-xs text-foreground/80 flex items-center gap-1.5 uppercase tracking-wider">
+                        <User className="w-3.5 h-3.5 text-foreground/50" /> Username
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.username}
+                        onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+                        placeholder="@enzo_scuderia"
+                        className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-4 py-3 text-sm outline-none focus:border-foreground/40 transition-colors"
+                      />
+                    </div>
+                  </div>
+
                   <div className="flex flex-col gap-2">
                     <label className="font-medium text-xs text-foreground/80 flex items-center gap-1.5 uppercase tracking-wider">
                       <Mail className="w-3.5 h-3.5 text-foreground/50" /> Email Address
@@ -116,20 +150,15 @@ export default function ProfilePage() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="name@example.com"
+                      placeholder="enzo@ferrari.com"
                       className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-4 py-3 text-sm outline-none focus:border-foreground/40 transition-colors"
                     />
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <div className="flex justify-between items-center">
-                      <label className="font-medium text-xs text-foreground/80 flex items-center gap-1.5 uppercase tracking-wider">
-                        <Lock className="w-3.5 h-3.5 text-foreground/50" /> Password
-                      </label>
-                      <a href="#" className="text-xs text-foreground/60 hover:text-foreground underline">
-                        Forgot?
-                      </a>
-                    </div>
+                    <label className="font-medium text-xs text-foreground/80 flex items-center gap-1.5 uppercase tracking-wider">
+                      <Lock className="w-3.5 h-3.5 text-foreground/50" /> Password
+                    </label>
                     <input
                       type="password"
                       required
@@ -140,11 +169,37 @@ export default function ProfilePage() {
                     />
                   </div>
 
+                  <div className="flex flex-col gap-2">
+                    <label className="font-medium text-xs text-foreground/80 flex items-center gap-1.5 uppercase tracking-wider">
+                      <Car className="w-3.5 h-3.5 text-foreground/50" /> Favorite / Dream Vehicle (Optional)
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.favoriteCar}
+                      onChange={(e) => setFormData({ ...formData, favoriteCar: e.target.value })}
+                      placeholder="e.g. 1962 Ferrari 250 GTO"
+                      className="w-full bg-foreground/5 border border-foreground/10 rounded-2xl px-4 py-3 text-sm outline-none focus:border-foreground/40 transition-colors"
+                    />
+                  </div>
+
+                  <label className="flex items-start gap-3 mt-2 cursor-pointer group">
+                    <input
+                      type="checkbox"
+                      required
+                      checked={formData.agreeTerms}
+                      onChange={(e) => setFormData({ ...formData, agreeTerms: e.target.checked })}
+                      className="mt-1 rounded border-foreground/20 text-foreground focus:ring-foreground"
+                    />
+                    <span className="text-xs text-foreground/70 leading-relaxed">
+                      I agree to the <a href="#" className="underline font-semibold text-foreground">Terms of Service</a> and <a href="#" className="underline font-semibold text-foreground">Privacy Policy</a>.
+                    </span>
+                  </label>
+
                   <button
                     type="submit"
-                    className="w-full py-4 mt-2 bg-foreground text-background font-semibold rounded-full flex items-center justify-center gap-2 hover:scale-[1.01] transition-transform shadow-lg text-sm"
+                    className="w-full py-4 mt-3 bg-foreground text-background font-semibold rounded-full flex items-center justify-center gap-2 hover:scale-[1.01] transition-transform shadow-lg text-sm"
                   >
-                    Sign In <ArrowRight className="w-4 h-4" />
+                    Complete Sign Up <ArrowRight className="w-4 h-4" />
                   </button>
 
                   <div className="relative my-4 flex items-center justify-center">
@@ -152,7 +207,7 @@ export default function ProfilePage() {
                       <div className="w-full border-t border-foreground/10" />
                     </div>
                     <span className="relative z-10 bg-background/80 px-4 text-xs uppercase tracking-widest text-foreground/50 font-semibold">
-                      Or Sign In With
+                      Or Join With
                     </span>
                   </div>
 
@@ -199,9 +254,9 @@ export default function ProfilePage() {
           </div>
 
           <div className="mt-8 text-center text-xs text-foreground/50">
-            Don't have an account yet?{' '}
-            <Link href="/signup" className="font-semibold text-foreground hover:underline">
-              Create a free account
+            Already have an account?{' '}
+            <Link href="/profile" className="font-semibold text-foreground hover:underline">
+              Sign in here
             </Link>
           </div>
         </motion.div>

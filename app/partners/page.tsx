@@ -183,7 +183,7 @@ function AudienceProfile() {
                 <profile.icon className="w-5 h-5 opacity-80" strokeWidth={1.5} />
               </div>
               <h3 className="font-semibold mb-3 tracking-tight text-xl">{profile.title}</h3>
-              <p className="text-white/70 font-medium leading-relaxed text-foreground/60 text-sm">{profile.desc}</p>
+              <p className="text-foreground/70 font-medium leading-relaxed text-foreground/60 text-sm">{profile.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -234,7 +234,7 @@ function PartnershipOpportunities() {
             
             <div className="absolute inset-0 p-8 flex flex-col justify-end relative z-10 text-white">
               <h3 className="font-semibold mb-3 tracking-tight text-xl md:text-2xl lg:text-3xl">{opp.title}</h3>
-              <p className="font-medium max-w-md transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 text-white/70 text-base">
+              <p className="font-medium max-w-md transform translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 text-foreground/70 text-base">
                 {opp.desc}
               </p>
             </div>

@@ -60,12 +60,12 @@ function HeroSection() {
           playsInline
           preload="auto"
           onCanPlay={() => setIsVideoLoaded(true)}
-          className="object-cover object-center w-full h-full opacity-30 md:opacity-100"
+          className="object-cover object-center w-full h-full"
         />
-        {/* Gradients optimized for legibility on mobile vs desktop */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/95 via-[#050505]/70 to-[#050505]/95 dark:from-[#050505]/95 dark:via-[#050505]/80 dark:to-[#050505]/95 md:hidden" />
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#050505]/95 via-[#050505]/40 to-transparent dark:from-[#050505]/95 dark:via-[#050505]/40" />
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-t from-[#050505]/90 via-transparent to-transparent opacity-60" />
+        {/* Subtle gradients to ensure text is legible but video shines through */}
+        <div className="absolute inset-0 bg-black/30 md:bg-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/70 via-transparent to-transparent md:w-2/3" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/10 to-transparent" />
       </motion.div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-12 gap-6 items-center">
@@ -198,7 +198,7 @@ function CollectionSection() {
             <div className="absolute bottom-6 left-6 right-6">
               <div className="glass-panel !bg-white/10 dark:!bg-black/20 !border-white/20 p-5 rounded-2xl transition-transform duration-500 group-hover:-translate-y-2">
                 <h3 className="font-semibold mb-1 relative z-10 text-white text-xl">{card.title}</h3>
-                <p className="opacity-0 -translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 relative z-10 text-white/70 text-sm">
+                <p className="opacity-100 translate-y-0 md:opacity-0 md:-translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 relative z-10 text-white/70 text-sm">
                   {card.desc}
                 </p>
               </div>
